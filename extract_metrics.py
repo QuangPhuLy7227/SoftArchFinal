@@ -3,7 +3,7 @@ import sys
 import csv
 from pathlib import Path
 
-sys.path.append("/Applications/Understand.app/Contents/MacOS")
+# sys.path.append("/Applications/Understand.app/Contents/MacOS")
 import understand as und
 
 # --- Load .env ---
