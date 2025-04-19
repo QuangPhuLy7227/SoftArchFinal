@@ -3,41 +3,26 @@ import understand
 def find(db):
     """
     Detect Adapter pattern instances in the Understand database.
-    Returns a dict with key 'adapter' mapping to a list of matches.
-    Each match is a dict: {'adapter': ..., 'target': ..., 'adaptee': ...}
+    Returns dict { 'adapter': [ {adapter, target, adaptee}... ] }
     """
     results = []
-    # Iterate over all classes in the database
-    for cls in db.ents("Class ~ *"):
-        # Look for interfaces this class implements
-        targets = []
-        for ref in cls.refs("Inheritance"):
-            if ref.kindname() == "Implements":
-                iface = ref.ent()
-                if iface.kind() == "interface":
-                    targets.append(iface)
-        if not targets:
-            continue
-
-        # Find member variables declared in this class
-        for var_ref in cls.refs("Define", "Variable"):
-            var_ent = var_ref.ent()
-            var_type = var_ent.type()
-            if not var_type:
-                continue
-            # Lookup class entity for the variable type
-            adaptees = db.lookup(var_type, "Class")
-            if not adaptees:
-                continue
-
-            for adaptee in adaptees:
-                # Skip if adaptee also implements the target interface
-                if any(r.ent() == targets[0] for r in adaptee.refs("Inheritance")):
-                    continue
-                # Record a potential adapter match
-                results.append({
-                    "adapter": cls.longname(),
-                    "target": targets[0].longname(),
-                    "adaptee": adaptee.longname()
-                })
+    # For every class, find interfaces it implements and member fields
+    for cls in db.ents("Class"):
+        # interfaces implemented
+        impl_ifaces = [r.ent() for r in cls.refs("Inheritance") if r.kindname()=="Implements"]
+        for iface in impl_ifaces:
+            # fields in class
+            for var in cls.ents("Define","Member"):
+                var_type = var.type() or ""
+                # lookup classes matching the field type
+                adaptees = db.lookup(var_type, "Class")
+                for adaptee in adaptees:
+                    # skip if adaptee also implements the interface
+                    if any(r.kindname()=="Implements" and r.ent()==iface for r in adaptee.refs("Inheritance")):
+                        continue
+                    results.append({
+                        "adapter": cls.longname(),
+                        "target": iface.longname(),
+                        "adaptee": adaptee.longname()
+                    })
     return {"adapter": results}
