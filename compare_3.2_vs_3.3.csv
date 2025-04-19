@@ -1,0 +1,1941 @@
+Class,Metric,3.2,3.3,Delta
+(Anon_1),Coupled,2,2,0
+(Anon_1),Derived,0,0,0
+(Anon_1),Public Methods,0,0,0
+(Anon_1),Cyclomatic,2,2,0
+(Anon_1),Cohesion,0,0,0
+(Anon_2),Coupled,2,2,0
+(Anon_2),Derived,0,0,0
+(Anon_2),Public Methods,0,0,0
+(Anon_2),Cyclomatic,1,1,0
+(Anon_2),Cohesion,0,0,0
+(Anon_3),Coupled,1,1,0
+(Anon_3),Derived,0,0,0
+(Anon_3),Public Methods,0,0,0
+(Anon_3),Cyclomatic,1,1,0
+(Anon_3),Cohesion,0,0,0
+AUTH_METHOD,Coupled,1,1,0
+AUTH_METHOD,Derived,0,0,0
+AUTH_METHOD,Public Methods,1,1,0
+AUTH_METHOD,Cyclomatic,5,5,0
+AUTH_METHOD,Cohesion,,,N/A
+ArrayList,Coupled,,,N/A
+ArrayList,Derived,,,N/A
+ArrayList,Public Methods,,,N/A
+ArrayList,Cyclomatic,,,N/A
+ArrayList,Cohesion,,,N/A
+Arrays,Coupled,,,N/A
+Arrays,Derived,,,N/A
+Arrays,Public Methods,,,N/A
+Arrays,Cyclomatic,,,N/A
+Arrays,Cohesion,,,N/A
+Article,Coupled,4,4,0
+Article,Derived,0,0,0
+Article,Public Methods,1,1,0
+Article,Cyclomatic,46,46,0
+Article,Cohesion,90,90,0
+ArticleInfo,Coupled,1,1,0
+ArticleInfo,Derived,0,0,0
+ArticleInfo,Public Methods,0,0,0
+ArticleInfo,Cyclomatic,1,1,0
+ArticleInfo,Cohesion,100,100,0
+ArticleIterator,Coupled,3,3,0
+ArticleIterator,Derived,0,0,0
+ArticleIterator,Public Methods,0,0,0
+ArticleIterator,Cyclomatic,5,5,0
+ArticleIterator,Cohesion,20,20,0
+ArticlePointer,Coupled,2,2,0
+ArticlePointer,Derived,0,0,0
+ArticlePointer,Public Methods,0,0,0
+ArticlePointer,Cyclomatic,0,0,0
+ArticlePointer,Cohesion,0,0,0
+ArticleReader,Coupled,9,9,0
+ArticleReader,Derived,0,0,0
+ArticleReader,Public Methods,1,1,0
+ArticleReader,Cyclomatic,11,11,0
+ArticleReader,Cohesion,0,0,0
+Assert,Coupled,,,N/A
+Assert,Derived,,,N/A
+Assert,Public Methods,,,N/A
+Assert,Cyclomatic,,,N/A
+Assert,Cohesion,,,N/A
+AssertionFailedError,Coupled,,,N/A
+AssertionFailedError,Derived,,,N/A
+AssertionFailedError,Public Methods,,,N/A
+AssertionFailedError,Cyclomatic,,,N/A
+AssertionFailedError,Cohesion,,,N/A
+AuthenticatingIMAPClient,Coupled,14,14,0
+AuthenticatingIMAPClient,Derived,0,0,0
+AuthenticatingIMAPClient,Public Methods,0,0,0
+AuthenticatingIMAPClient,Cyclomatic,22,22,0
+AuthenticatingIMAPClient,Cohesion,0,0,0
+AuthenticatingSMTPClient,Coupled,13,14,1
+AuthenticatingSMTPClient,Derived,0,0,0
+AuthenticatingSMTPClient,Public Methods,0,0,0
+AuthenticatingSMTPClient,Cyclomatic,18,22,4
+AuthenticatingSMTPClient,Cohesion,0,0,0
+Base64,Coupled,6,6,0
+Base64,Derived,0,0,0
+Base64,Public Methods,21,21,0
+Base64,Cyclomatic,103,103,0
+Base64,Cohesion,90,90,0
+Base64Test,Coupled,5,5,0
+Base64Test,Derived,0,0,0
+Base64Test,Public Methods,0,0,0
+Base64Test,Cyclomatic,30,30,0
+Base64Test,Cohesion,0,0,0
+BigInteger,Coupled,,,N/A
+BigInteger,Derived,,,N/A
+BigInteger,Public Methods,,,N/A
+BigInteger,Cyclomatic,,,N/A
+BigInteger,Cohesion,,,N/A
+BindException,Coupled,,,N/A
+BindException,Derived,,,N/A
+BindException,Public Methods,,,N/A
+BindException,Cyclomatic,,,N/A
+BindException,Cohesion,,,N/A
+BufferedInputStream,Coupled,,,N/A
+BufferedInputStream,Derived,,,N/A
+BufferedInputStream,Public Methods,,,N/A
+BufferedInputStream,Cyclomatic,,,N/A
+BufferedInputStream,Cohesion,,,N/A
+BufferedOutputStream,Coupled,,,N/A
+BufferedOutputStream,Derived,,,N/A
+BufferedOutputStream,Public Methods,,,N/A
+BufferedOutputStream,Cyclomatic,,,N/A
+BufferedOutputStream,Cohesion,,,N/A
+BufferedReader,Coupled,,,N/A
+BufferedReader,Derived,,,N/A
+BufferedReader,Public Methods,,,N/A
+BufferedReader,Cyclomatic,,,N/A
+BufferedReader,Cohesion,,,N/A
+BufferedWriter,Coupled,,,N/A
+BufferedWriter,Derived,,,N/A
+BufferedWriter,Public Methods,,,N/A
+BufferedWriter,Cyclomatic,,,N/A
+BufferedWriter,Cohesion,,,N/A
+ByteArrayInputStream,Coupled,,,N/A
+ByteArrayInputStream,Derived,,,N/A
+ByteArrayInputStream,Public Methods,,,N/A
+ByteArrayInputStream,Cyclomatic,,,N/A
+ByteArrayInputStream,Cohesion,,,N/A
+CRLFLineReader,Coupled,5,5,0
+CRLFLineReader,Derived,0,0,0
+CRLFLineReader,Public Methods,0,0,0
+CRLFLineReader,Cyclomatic,6,6,0
+CRLFLineReader,Cohesion,0,0,0
+CSL,Coupled,7,7,0
+CSL,Derived,0,0,0
+CSL,Public Methods,0,0,0
+CSL,Cyclomatic,8,8,0
+CSL,Cohesion,50,50,0
+Calendar,Coupled,,,N/A
+Calendar,Derived,,,N/A
+Calendar,Public Methods,,,N/A
+Calendar,Cyclomatic,,,N/A
+Calendar,Cohesion,,,N/A
+Certificate,Coupled,,,N/A
+Certificate,Derived,,,N/A
+Certificate,Public Methods,,,N/A
+Certificate,Cyclomatic,,,N/A
+Certificate,Cohesion,,,N/A
+CertificateException,Coupled,,,N/A
+CertificateException,Derived,,,N/A
+CertificateException,Public Methods,,,N/A
+CertificateException,Cyclomatic,,,N/A
+CertificateException,Cohesion,,,N/A
+CharGenTCPClient,Coupled,1,1,0
+CharGenTCPClient,Derived,0,0,0
+CharGenTCPClient,Public Methods,0,0,0
+CharGenTCPClient,Cyclomatic,2,2,0
+CharGenTCPClient,Cohesion,0,0,0
+CharGenUDPClient,Coupled,3,3,0
+CharGenUDPClient,Derived,0,0,0
+CharGenUDPClient,Public Methods,0,0,0
+CharGenUDPClient,Cyclomatic,4,4,0
+CharGenUDPClient,Cohesion,50,50,0
+Charset,Coupled,N/A,,N/A
+Charset,Derived,N/A,,N/A
+Charset,Public Methods,N/A,,N/A
+Charset,Cyclomatic,N/A,,N/A
+Charset,Cohesion,N/A,,N/A
+Charsets,Coupled,N/A,2,N/A
+Charsets,Derived,N/A,0,N/A
+Charsets,Public Methods,N/A,2,N/A
+Charsets,Cyclomatic,N/A,4,N/A
+Charsets,Cohesion,N/A,0,N/A
+Class,Coupled,,,N/A
+Class,Derived,,,N/A
+Class,Public Methods,,,N/A
+Class,Cyclomatic,,,N/A
+Class,Cohesion,,,N/A
+ClassCastException,Coupled,,,N/A
+ClassCastException,Derived,,,N/A
+ClassCastException,Public Methods,,,N/A
+ClassCastException,Cyclomatic,,,N/A
+ClassCastException,Cohesion,,,N/A
+ClassNotFoundException,Coupled,,,N/A
+ClassNotFoundException,Derived,,,N/A
+ClassNotFoundException,Public Methods,,,N/A
+ClassNotFoundException,Cyclomatic,,,N/A
+ClassNotFoundException,Cohesion,,,N/A
+ClientKeyStore,Coupled,5,5,0
+ClientKeyStore,Derived,0,0,0
+ClientKeyStore,Public Methods,0,0,0
+ClientKeyStore,Cyclomatic,5,5,0
+ClientKeyStore,Cohesion,50,50,0
+Closeable,Coupled,,,N/A
+Closeable,Derived,,,N/A
+Closeable,Public Methods,,,N/A
+Closeable,Cyclomatic,,,N/A
+Closeable,Cohesion,,,N/A
+CodeSource,Coupled,,,N/A
+CodeSource,Derived,,,N/A
+CodeSource,Public Methods,,,N/A
+CodeSource,Cyclomatic,,,N/A
+CodeSource,Cohesion,,,N/A
+Collection,Coupled,,,N/A
+Collection,Derived,,,N/A
+Collection,Public Methods,,,N/A
+Collection,Cyclomatic,,,N/A
+Collection,Cohesion,,,N/A
+Comparable,Coupled,,,N/A
+Comparable,Derived,,,N/A
+Comparable,Public Methods,,,N/A
+Comparable,Cyclomatic,,,N/A
+Comparable,Cohesion,,,N/A
+Comparator,Coupled,,,N/A
+Comparator,Derived,,,N/A
+Comparator,Public Methods,,,N/A
+Comparator,Cyclomatic,,,N/A
+Comparator,Cohesion,,,N/A
+CompositeFTPParseTestFramework,Coupled,5,5,0
+CompositeFTPParseTestFramework,Derived,2,2,0
+CompositeFTPParseTestFramework,Public Methods,0,0,0
+CompositeFTPParseTestFramework,Cyclomatic,13,13,0
+CompositeFTPParseTestFramework,Cohesion,0,0,0
+CompositeFileEntryParser,Coupled,2,2,0
+CompositeFileEntryParser,Derived,0,0,0
+CompositeFileEntryParser,Public Methods,0,0,0
+CompositeFileEntryParser,Cyclomatic,6,6,0
+CompositeFileEntryParser,Cohesion,0,0,0
+ConfigurableFTPFileEntryParserImpl,Coupled,6,6,0
+ConfigurableFTPFileEntryParserImpl,Derived,16,16,0
+ConfigurableFTPFileEntryParserImpl,Public Methods,0,0,0
+ConfigurableFTPFileEntryParserImpl,Cyclomatic,7,7,0
+ConfigurableFTPFileEntryParserImpl,Cohesion,0,0,0
+CopyOnWriteArrayList,Coupled,,,N/A
+CopyOnWriteArrayList,Derived,,,N/A
+CopyOnWriteArrayList,Public Methods,,,N/A
+CopyOnWriteArrayList,Cyclomatic,,,N/A
+CopyOnWriteArrayList,Cohesion,,,N/A
+CopyStreamAdapter,Coupled,3,3,0
+CopyStreamAdapter,Derived,0,0,0
+CopyStreamAdapter,Public Methods,0,0,0
+CopyStreamAdapter,Cyclomatic,7,7,0
+CopyStreamAdapter,Cohesion,0,0,0
+CopyStreamEvent,Coupled,2,2,0
+CopyStreamEvent,Derived,0,0,0
+CopyStreamEvent,Public Methods,0,0,0
+CopyStreamEvent,Cyclomatic,5,5,0
+CopyStreamEvent,Cohesion,40,40,0
+CopyStreamException,Coupled,1,1,0
+CopyStreamException,Derived,0,0,0
+CopyStreamException,Public Methods,0,0,0
+CopyStreamException,Cyclomatic,3,3,0
+CopyStreamException,Cohesion,33,33,0
+DataInputStream,Coupled,,,N/A
+DataInputStream,Derived,,,N/A
+DataInputStream,Public Methods,,,N/A
+DataInputStream,Cyclomatic,,,N/A
+DataInputStream,Cohesion,,,N/A
+DataOutputStream,Coupled,,,N/A
+DataOutputStream,Derived,,,N/A
+DataOutputStream,Public Methods,,,N/A
+DataOutputStream,Cyclomatic,,,N/A
+DataOutputStream,Cohesion,,,N/A
+DatagramPacket,Coupled,,,N/A
+DatagramPacket,Derived,,,N/A
+DatagramPacket,Public Methods,,,N/A
+DatagramPacket,Cyclomatic,,,N/A
+DatagramPacket,Cohesion,,,N/A
+DatagramSocket,Coupled,,,N/A
+DatagramSocket,Derived,,,N/A
+DatagramSocket,Public Methods,,,N/A
+DatagramSocket,Cyclomatic,,,N/A
+DatagramSocket,Cohesion,,,N/A
+DatagramSocketClient,Coupled,5,7,2
+DatagramSocketClient,Derived,6,6,0
+DatagramSocketClient,Public Methods,0,0,0
+DatagramSocketClient,Cyclomatic,15,18,3
+DatagramSocketClient,Cohesion,50,64,14
+Date,Coupled,,,N/A
+Date,Derived,,,N/A
+Date,Public Methods,,,N/A
+Date,Cyclomatic,,,N/A
+Date,Cohesion,,,N/A
+DateFormat,Coupled,,,N/A
+DateFormat,Derived,,,N/A
+DateFormat,Public Methods,,,N/A
+DateFormat,Cyclomatic,,,N/A
+DateFormat,Cohesion,,,N/A
+DateFormatSymbols,Coupled,,,N/A
+DateFormatSymbols,Derived,,,N/A
+DateFormatSymbols,Public Methods,,,N/A
+DateFormatSymbols,Cyclomatic,,,N/A
+DateFormatSymbols,Cohesion,,,N/A
+DaytimeTCPClient,Coupled,5,5,0
+DaytimeTCPClient,Derived,0,0,0
+DaytimeTCPClient,Public Methods,0,0,0
+DaytimeTCPClient,Cyclomatic,4,4,0
+DaytimeTCPClient,Cohesion,50,50,0
+DaytimeUDPClient,Coupled,4,4,0
+DaytimeUDPClient,Derived,0,0,0
+DaytimeUDPClient,Public Methods,0,0,0
+DaytimeUDPClient,Cyclomatic,2,2,0
+DaytimeUDPClient,Cohesion,50,50,0
+DecimalFormat,Coupled,,,N/A
+DecimalFormat,Derived,,,N/A
+DecimalFormat,Public Methods,,,N/A
+DecimalFormat,Cyclomatic,,,N/A
+DecimalFormat,Cohesion,,,N/A
+DefaultDatagramSocketFactory,Coupled,3,3,0
+DefaultDatagramSocketFactory,Derived,0,0,0
+DefaultDatagramSocketFactory,Public Methods,0,0,0
+DefaultDatagramSocketFactory,Cyclomatic,3,3,0
+DefaultDatagramSocketFactory,Cohesion,0,0,0
+DefaultFTPFileEntryParserFactory,Coupled,20,20,0
+DefaultFTPFileEntryParserFactory,Derived,0,0,0
+DefaultFTPFileEntryParserFactory,Public Methods,0,0,0
+DefaultFTPFileEntryParserFactory,Cyclomatic,31,31,0
+DefaultFTPFileEntryParserFactory,Cohesion,0,0,0
+DefaultFTPFileEntryParserFactoryTest,Coupled,22,22,0
+DefaultFTPFileEntryParserFactoryTest,Derived,0,0,0
+DefaultFTPFileEntryParserFactoryTest,Public Methods,0,0,0
+DefaultFTPFileEntryParserFactoryTest,Cyclomatic,10,10,0
+DefaultFTPFileEntryParserFactoryTest,Cohesion,0,0,0
+DefaultSocketFactory,Coupled,9,9,0
+DefaultSocketFactory,Derived,0,0,0
+DefaultSocketFactory,Public Methods,0,0,0
+DefaultSocketFactory,Cyclomatic,15,15,0
+DefaultSocketFactory,Cohesion,40,40,0
+DiscardTCPClient,Coupled,1,1,0
+DiscardTCPClient,Derived,1,1,0
+DiscardTCPClient,Public Methods,0,0,0
+DiscardTCPClient,Cyclomatic,2,2,0
+DiscardTCPClient,Cohesion,0,0,0
+DiscardUDPClient,Coupled,3,3,0
+DiscardUDPClient,Derived,1,1,0
+DiscardUDPClient,Public Methods,0,0,0
+DiscardUDPClient,Cyclomatic,4,4,0
+DiscardUDPClient,Cohesion,50,50,0
+DotTerminatedMessageReader,Coupled,5,5,0
+DotTerminatedMessageReader,Derived,0,0,0
+DotTerminatedMessageReader,Public Methods,0,0,0
+DotTerminatedMessageReader,Cyclomatic,26,26,0
+DotTerminatedMessageReader,Cohesion,56,56,0
+DotTerminatedMessageReaderTest,Coupled,6,6,0
+DotTerminatedMessageReaderTest,Derived,0,0,0
+DotTerminatedMessageReaderTest,Public Methods,0,0,0
+DotTerminatedMessageReaderTest,Cyclomatic,24,24,0
+DotTerminatedMessageReaderTest,Cohesion,6,6,0
+DotTerminatedMessageWriter,Coupled,3,3,0
+DotTerminatedMessageWriter,Derived,0,0,0
+DotTerminatedMessageWriter,Public Methods,0,0,0
+DotTerminatedMessageWriter,Cyclomatic,17,17,0
+DotTerminatedMessageWriter,Cohesion,56,56,0
+DownloadListings,Coupled,16,16,0
+DownloadListings,Derived,0,0,0
+DownloadListings,Public Methods,1,1,0
+DownloadListings,Cyclomatic,11,11,0
+DownloadListings,Cohesion,38,38,0
+EOFException,Coupled,,,N/A
+EOFException,Derived,,,N/A
+EOFException,Public Methods,,,N/A
+EOFException,Cyclomatic,,,N/A
+EOFException,Cohesion,,,N/A
+EchoOptionHandler,Coupled,2,2,0
+EchoOptionHandler,Derived,0,0,0
+EchoOptionHandler,Public Methods,0,0,0
+EchoOptionHandler,Cyclomatic,5,5,0
+EchoOptionHandler,Cohesion,0,0,0
+EchoOptionHandlerTest,Coupled,5,5,0
+EchoOptionHandlerTest,Derived,0,0,0
+EchoOptionHandlerTest,Public Methods,0,0,0
+EchoOptionHandlerTest,Cyclomatic,4,4,0
+EchoOptionHandlerTest,Cohesion,0,0,0
+EchoTCPClient,Coupled,1,1,0
+EchoTCPClient,Derived,0,0,0
+EchoTCPClient,Public Methods,0,0,0
+EchoTCPClient,Cyclomatic,2,2,0
+EchoTCPClient,Cohesion,0,0,0
+EchoUDPClient,Coupled,4,4,0
+EchoUDPClient,Derived,0,0,0
+EchoUDPClient,Public Methods,0,0,0
+EchoUDPClient,Cyclomatic,4,4,0
+EchoUDPClient,Cohesion,75,75,0
+EnterpriseUnixFTPEntryParser,Coupled,4,4,0
+EnterpriseUnixFTPEntryParser,Derived,0,0,0
+EnterpriseUnixFTPEntryParser,Public Methods,0,0,0
+EnterpriseUnixFTPEntryParser,Cyclomatic,7,7,0
+EnterpriseUnixFTPEntryParser,Cohesion,0,0,0
+EnterpriseUnixFTPEntryParserTest,Coupled,7,7,0
+EnterpriseUnixFTPEntryParserTest,Derived,0,0,0
+EnterpriseUnixFTPEntryParserTest,Public Methods,0,0,0
+EnterpriseUnixFTPEntryParserTest,Cyclomatic,8,8,0
+EnterpriseUnixFTPEntryParserTest,Cohesion,0,0,0
+Enumeration,Coupled,,,N/A
+Enumeration,Derived,,,N/A
+Enumeration,Public Methods,,,N/A
+Enumeration,Cyclomatic,,,N/A
+Enumeration,Cohesion,,,N/A
+EventListener,Coupled,,,N/A
+EventListener,Derived,,,N/A
+EventListener,Public Methods,,,N/A
+EventListener,Cyclomatic,,,N/A
+EventListener,Cohesion,,,N/A
+EventObject,Coupled,,,N/A
+EventObject,Derived,,,N/A
+EventObject,Public Methods,,,N/A
+EventObject,Cyclomatic,,,N/A
+EventObject,Cohesion,,,N/A
+Exception,Coupled,,,N/A
+Exception,Derived,,,N/A
+Exception,Public Methods,,,N/A
+Exception,Cyclomatic,,,N/A
+Exception,Cohesion,,,N/A
+ExceptionInInitializerError,Coupled,,,N/A
+ExceptionInInitializerError,Derived,,,N/A
+ExceptionInInitializerError,Public Methods,,,N/A
+ExceptionInInitializerError,Cyclomatic,,,N/A
+ExceptionInInitializerError,Cohesion,,,N/A
+ExtendedNNTPOps,Coupled,10,10,0
+ExtendedNNTPOps,Derived,0,0,0
+ExtendedNNTPOps,Public Methods,1,1,0
+ExtendedNNTPOps,Cyclomatic,12,12,0
+ExtendedNNTPOps,Cohesion,33,33,0
+ExtendedPOP3Client,Coupled,12,12,0
+ExtendedPOP3Client,Derived,0,0,0
+ExtendedPOP3Client,Public Methods,0,0,0
+ExtendedPOP3Client,Cyclomatic,8,8,0
+ExtendedPOP3Client,Cohesion,0,0,0
+FETCH_ITEM_NAMES,Coupled,1,1,0
+FETCH_ITEM_NAMES,Derived,0,0,0
+FETCH_ITEM_NAMES,Public Methods,0,0,0
+FETCH_ITEM_NAMES,Cyclomatic,0,0,0
+FETCH_ITEM_NAMES,Cohesion,,,N/A
+FTP,Coupled,21,23,2
+FTP,Derived,2,2,0
+FTP,Public Methods,0,0,0
+FTP,Cyclomatic,95,97,2
+FTP,Cohesion,95,96,1
+FTPClient,Coupled,53,54,1
+FTPClient,Derived,5,5,0
+FTPClient,Public Methods,2,2,0
+FTPClient,Cyclomatic,232,249,17
+FTPClient,Cohesion,97,97,0
+FTPClientConfig,Coupled,8,8,0
+FTPClientConfig,Derived,0,0,0
+FTPClientConfig,Public Methods,4,4,0
+FTPClientConfig,Cyclomatic,25,25,0
+FTPClientConfig,Cohesion,86,86,0
+FTPClientConfigFunctionalTest,Coupled,12,12,0
+FTPClientConfigFunctionalTest,Derived,0,0,0
+FTPClientConfigFunctionalTest,Public Methods,0,0,0
+FTPClientConfigFunctionalTest,Cyclomatic,14,14,0
+FTPClientConfigFunctionalTest,Cohesion,67,67,0
+FTPClientConfigTest,Coupled,9,9,0
+FTPClientConfigTest,Derived,0,0,0
+FTPClientConfigTest,Public Methods,0,0,0
+FTPClientConfigTest,Cyclomatic,21,21,0
+FTPClientConfigTest,Cohesion,82,82,0
+FTPClientExample,Coupled,21,21,0
+FTPClientExample,Derived,0,0,0
+FTPClientExample,Public Methods,2,2,0
+FTPClientExample,Cyclomatic,76,76,0
+FTPClientExample,Cohesion,0,0,0
+FTPClientTest,Coupled,N/A,2,N/A
+FTPClientTest,Derived,N/A,0,N/A
+FTPClientTest,Public Methods,N/A,0,N/A
+FTPClientTest,Cyclomatic,N/A,3,N/A
+FTPClientTest,Cohesion,N/A,0,N/A
+FTPCmd,Coupled,N/A,2,N/A
+FTPCmd,Derived,N/A,0,N/A
+FTPCmd,Public Methods,N/A,0,N/A
+FTPCmd,Cyclomatic,N/A,1,N/A
+FTPCmd,Cohesion,N/A,,N/A
+FTPCommand,Coupled,2,3,1
+FTPCommand,Derived,0,0,0
+FTPCommand,Public Methods,2,2,0
+FTPCommand,Cyclomatic,4,4,0
+FTPCommand,Cohesion,0,0,0
+FTPCommandTest,Coupled,2,3,1
+FTPCommandTest,Derived,0,0,0
+FTPCommandTest,Public Methods,0,0,0
+FTPCommandTest,Cyclomatic,2,2,0
+FTPCommandTest,Cohesion,0,0,0
+FTPConfigEntryParserTest,Coupled,6,6,0
+FTPConfigEntryParserTest,Derived,0,0,0
+FTPConfigEntryParserTest,Public Methods,0,0,0
+FTPConfigEntryParserTest,Cyclomatic,2,2,0
+FTPConfigEntryParserTest,Cohesion,0,0,0
+FTPConnectionClosedException,Coupled,1,1,0
+FTPConnectionClosedException,Derived,0,0,0
+FTPConnectionClosedException,Public Methods,0,0,0
+FTPConnectionClosedException,Cyclomatic,2,2,0
+FTPConnectionClosedException,Cohesion,0,0,0
+FTPFile,Coupled,5,5,0
+FTPFile,Derived,0,0,0
+FTPFile,Public Methods,0,0,0
+FTPFile,Cyclomatic,36,36,0
+FTPFile,Cohesion,88,88,0
+FTPFileEntryParserImpl,Coupled,4,4,0
+FTPFileEntryParserImpl,Derived,6,6,0
+FTPFileEntryParserImpl,Public Methods,0,0,0
+FTPFileEntryParserImpl,Cyclomatic,3,3,0
+FTPFileEntryParserImpl,Cohesion,0,0,0
+FTPFileFilters,Coupled,1,1,0
+FTPFileFilters,Derived,0,0,0
+FTPFileFilters,Public Methods,0,0,0
+FTPFileFilters,Cyclomatic,0,0,0
+FTPFileFilters,Cohesion,0,0,0
+FTPHTTPClient,Coupled,18,19,1
+FTPHTTPClient,Derived,0,0,0
+FTPHTTPClient,Public Methods,0,0,0
+FTPHTTPClient,Cyclomatic,19,19,0
+FTPHTTPClient,Cohesion,63,61,-2
+FTPListParseEngine,Coupled,15,16,1
+FTPListParseEngine,Derived,0,0,0
+FTPListParseEngine,Public Methods,0,0,0
+FTPListParseEngine,Cyclomatic,17,16,-1
+FTPListParseEngine,Cohesion,55,55,0
+FTPParseTestFramework,Coupled,7,7,0
+FTPParseTestFramework,Derived,8,8,0
+FTPParseTestFramework,Public Methods,0,0,0
+FTPParseTestFramework,Cyclomatic,11,11,0
+FTPParseTestFramework,Cohesion,71,71,0
+FTPReply,Coupled,0,0,0
+FTPReply,Derived,0,0,0
+FTPReply,Public Methods,6,6,0
+FTPReply,Cyclomatic,7,7,0
+FTPReply,Cohesion,0,0,0
+FTPSClient,Coupled,23,23,0
+FTPSClient,Derived,0,0,0
+FTPSClient,Public Methods,0,0,0
+FTPSClient,Cyclomatic,82,82,0
+FTPSClient,Cohesion,95,95,0
+FTPSCommand,Coupled,2,2,0
+FTPSCommand,Derived,0,0,0
+FTPSCommand,Public Methods,1,1,0
+FTPSCommand,Cyclomatic,1,1,0
+FTPSCommand,Cohesion,0,0,0
+FTPSServerSocketFactory,Coupled,6,6,0
+FTPSServerSocketFactory,Derived,0,0,0
+FTPSServerSocketFactory,Public Methods,0,0,0
+FTPSServerSocketFactory,Cyclomatic,6,6,0
+FTPSServerSocketFactory,Cohesion,17,17,0
+FTPSSocketFactory,Coupled,11,11,0
+FTPSSocketFactory,Derived,0,0,0
+FTPSSocketFactory,Public Methods,0,0,0
+FTPSSocketFactory,Cyclomatic,10,10,0
+FTPSSocketFactory,Cohesion,10,10,0
+FTPSTrustManager,Coupled,4,4,0
+FTPSTrustManager,Derived,0,0,0
+FTPSTrustManager,Public Methods,0,0,0
+FTPSTrustManager,Cyclomatic,4,4,0
+FTPSTrustManager,Cohesion,0,0,0
+FTPTimestampParserImpl,Coupled,10,10,0
+FTPTimestampParserImpl,Derived,0,0,0
+FTPTimestampParserImpl,Public Methods,0,0,0
+FTPTimestampParserImpl,Cyclomatic,28,28,0
+FTPTimestampParserImpl,Cohesion,60,60,0
+FTPTimestampParserImplTest,Coupled,14,14,0
+FTPTimestampParserImplTest,Derived,0,0,0
+FTPTimestampParserImplTest,Public Methods,0,0,0
+FTPTimestampParserImplTest,Cyclomatic,41,41,0
+FTPTimestampParserImplTest,Cohesion,0,0,0
+File,Coupled,,,N/A
+File,Derived,,,N/A
+File,Public Methods,,,N/A
+File,Cyclomatic,,,N/A
+File,Cohesion,,,N/A
+FileInputStream,Coupled,,,N/A
+FileInputStream,Derived,,,N/A
+FileInputStream,Public Methods,,,N/A
+FileInputStream,Cyclomatic,,,N/A
+FileInputStream,Cohesion,,,N/A
+FileNotFoundException,Coupled,,,N/A
+FileNotFoundException,Derived,,,N/A
+FileNotFoundException,Public Methods,,,N/A
+FileNotFoundException,Cyclomatic,,,N/A
+FileNotFoundException,Cohesion,,,N/A
+FileOutputStream,Coupled,,,N/A
+FileOutputStream,Derived,,,N/A
+FileOutputStream,Public Methods,,,N/A
+FileOutputStream,Cyclomatic,,,N/A
+FileOutputStream,Cohesion,,,N/A
+FileReader,Coupled,,,N/A
+FileReader,Derived,,,N/A
+FileReader,Public Methods,,,N/A
+FileReader,Cyclomatic,,,N/A
+FileReader,Cohesion,,,N/A
+FileWriter,Coupled,,,N/A
+FileWriter,Derived,,,N/A
+FileWriter,Public Methods,,,N/A
+FileWriter,Cyclomatic,,,N/A
+FileWriter,Cohesion,,,N/A
+FilenameFilter,Coupled,,,N/A
+FilenameFilter,Derived,,,N/A
+FilenameFilter,Public Methods,,,N/A
+FilenameFilter,Cyclomatic,,,N/A
+FilenameFilter,Cohesion,,,N/A
+FilterInputStream,Coupled,,,N/A
+FilterInputStream,Derived,,,N/A
+FilterInputStream,Public Methods,,,N/A
+FilterInputStream,Cyclomatic,,,N/A
+FilterInputStream,Cohesion,,,N/A
+FilterOutputStream,Coupled,,,N/A
+FilterOutputStream,Derived,,,N/A
+FilterOutputStream,Public Methods,,,N/A
+FilterOutputStream,Cyclomatic,,,N/A
+FilterOutputStream,Cohesion,,,N/A
+FingerClient,Coupled,8,9,1
+FingerClient,Derived,1,1,0
+FingerClient,Public Methods,0,0,0
+FingerClient,Cyclomatic,10,9,-1
+FingerClient,Cohesion,83,83,0
+Format,Coupled,,,N/A
+Format,Derived,,,N/A
+Format,Public Methods,,,N/A
+Format,Cyclomatic,,,N/A
+Format,Cohesion,,,N/A
+Formatter,Coupled,,,N/A
+Formatter,Derived,,,N/A
+Formatter,Public Methods,,,N/A
+Formatter,Cyclomatic,,,N/A
+Formatter,Cohesion,,,N/A
+FromNetASCIIInputStream,Coupled,4,6,2
+FromNetASCIIInputStream,Derived,0,0,0
+FromNetASCIIInputStream,Public Methods,1,1,0
+FromNetASCIIInputStream,Cyclomatic,18,18,0
+FromNetASCIIInputStream,Cohesion,71,71,0
+FromNetASCIIOutputStream,Coupled,4,4,0
+FromNetASCIIOutputStream,Derived,0,0,0
+FromNetASCIIOutputStream,Public Methods,0,0,0
+FromNetASCIIOutputStream,Cyclomatic,15,15,0
+FromNetASCIIOutputStream,Cohesion,50,50,0
+GeneralSecurityException,Coupled,,,N/A
+GeneralSecurityException,Derived,,,N/A
+GeneralSecurityException,Public Methods,,,N/A
+GeneralSecurityException,Cyclomatic,,,N/A
+GeneralSecurityException,Cohesion,,,N/A
+GregorianCalendar,Coupled,,,N/A
+GregorianCalendar,Derived,,,N/A
+GregorianCalendar,Public Methods,,,N/A
+GregorianCalendar,Cyclomatic,,,N/A
+GregorianCalendar,Cohesion,,,N/A
+HashMap,Coupled,,,N/A
+HashMap,Derived,,,N/A
+HashMap,Public Methods,,,N/A
+HashMap,Cyclomatic,,,N/A
+HashMap,Cohesion,,,N/A
+HashSet,Coupled,,,N/A
+HashSet,Derived,,,N/A
+HashSet,Public Methods,,,N/A
+HashSet,Cyclomatic,,,N/A
+HashSet,Cohesion,,,N/A
+IMAP,Coupled,15,15,0
+IMAP,Derived,1,1,0
+IMAP,Public Methods,0,0,0
+IMAP,Cyclomatic,31,31,0
+IMAP,Cohesion,82,82,0
+IMAPClient,Coupled,6,6,0
+IMAPClient,Derived,1,1,0
+IMAPClient,Public Methods,0,0,0
+IMAPClient,Cyclomatic,34,34,0
+IMAPClient,Cohesion,0,0,0
+IMAPCommand,Coupled,2,2,0
+IMAPCommand,Derived,0,0,0
+IMAPCommand,Public Methods,1,1,0
+IMAPCommand,Cyclomatic,9,9,0
+IMAPCommand,Cohesion,,,N/A
+IMAPMail,Coupled,8,8,0
+IMAPMail,Derived,0,0,0
+IMAPMail,Public Methods,1,1,0
+IMAPMail,Cyclomatic,7,7,0
+IMAPMail,Cohesion,0,0,0
+IMAPReply,Coupled,5,5,0
+IMAPReply,Derived,0,0,0
+IMAPReply,Public Methods,8,8,0
+IMAPReply,Cyclomatic,15,15,0
+IMAPReply,Cohesion,0,0,0
+IMAPSClient,Coupled,16,16,0
+IMAPSClient,Derived,1,1,0
+IMAPSClient,Public Methods,0,0,0
+IMAPSClient,Cyclomatic,26,26,0
+IMAPSClient,Cohesion,89,89,0
+IMAPState,Coupled,1,1,0
+IMAPState,Derived,0,0,0
+IMAPState,Public Methods,0,0,0
+IMAPState,Cyclomatic,0,0,0
+IMAPState,Cohesion,,,N/A
+IMAPTest,Coupled,4,4,0
+IMAPTest,Derived,0,0,0
+IMAPTest,Public Methods,0,0,0
+IMAPTest,Cyclomatic,4,4,0
+IMAPTest,Cohesion,0,0,0
+IOException,Coupled,,,N/A
+IOException,Derived,,,N/A
+IOException,Public Methods,,,N/A
+IOException,Cyclomatic,,,N/A
+IOException,Cohesion,,,N/A
+IOUtil,Coupled,4,4,0
+IOUtil,Derived,0,0,0
+IOUtil,Public Methods,1,1,0
+IOUtil,Cyclomatic,2,2,0
+IOUtil,Cohesion,0,0,0
+IllegalArgumentException,Coupled,,,N/A
+IllegalArgumentException,Derived,,,N/A
+IllegalArgumentException,Public Methods,,,N/A
+IllegalArgumentException,Cyclomatic,,,N/A
+IllegalArgumentException,Cohesion,,,N/A
+IllegalStateException,Coupled,,,N/A
+IllegalStateException,Derived,,,N/A
+IllegalStateException,Public Methods,,,N/A
+IllegalStateException,Cyclomatic,,,N/A
+IllegalStateException,Cohesion,,,N/A
+Inet4Address,Coupled,,,N/A
+Inet4Address,Derived,,,N/A
+Inet4Address,Public Methods,,,N/A
+Inet4Address,Cyclomatic,,,N/A
+Inet4Address,Cohesion,,,N/A
+Inet6Address,Coupled,,,N/A
+Inet6Address,Derived,,,N/A
+Inet6Address,Public Methods,,,N/A
+Inet6Address,Cyclomatic,,,N/A
+Inet6Address,Cohesion,,,N/A
+InetAddress,Coupled,,,N/A
+InetAddress,Derived,,,N/A
+InetAddress,Public Methods,,,N/A
+InetAddress,Cyclomatic,,,N/A
+InetAddress,Cohesion,,,N/A
+InetSocketAddress,Coupled,,,N/A
+InetSocketAddress,Derived,,,N/A
+InetSocketAddress,Public Methods,,,N/A
+InetSocketAddress,Cyclomatic,,,N/A
+InetSocketAddress,Cohesion,,,N/A
+InputStream,Coupled,,,N/A
+InputStream,Derived,,,N/A
+InputStream,Public Methods,,,N/A
+InputStream,Cyclomatic,,,N/A
+InputStream,Cohesion,,,N/A
+InputStreamReader,Coupled,,,N/A
+InputStreamReader,Derived,,,N/A
+InputStreamReader,Public Methods,,,N/A
+InputStreamReader,Cyclomatic,,,N/A
+InputStreamReader,Cohesion,,,N/A
+InstantiationException,Coupled,,,N/A
+InstantiationException,Derived,,,N/A
+InstantiationException,Public Methods,,,N/A
+InstantiationException,Cyclomatic,,,N/A
+InstantiationException,Cohesion,,,N/A
+Integer,Coupled,,,N/A
+Integer,Derived,,,N/A
+Integer,Public Methods,,,N/A
+Integer,Cyclomatic,,,N/A
+Integer,Cohesion,,,N/A
+InterruptedException,Coupled,,,N/A
+InterruptedException,Derived,,,N/A
+InterruptedException,Public Methods,,,N/A
+InterruptedException,Cyclomatic,,,N/A
+InterruptedException,Cohesion,,,N/A
+InterruptedIOException,Coupled,,,N/A
+InterruptedIOException,Derived,,,N/A
+InterruptedIOException,Public Methods,,,N/A
+InterruptedIOException,Cyclomatic,,,N/A
+InterruptedIOException,Cohesion,,,N/A
+InvalidKeyException,Coupled,,,N/A
+InvalidKeyException,Derived,,,N/A
+InvalidKeyException,Public Methods,,,N/A
+InvalidKeyException,Cyclomatic,,,N/A
+InvalidKeyException,Cohesion,,,N/A
+InvalidKeySpecException,Coupled,,,N/A
+InvalidKeySpecException,Derived,,,N/A
+InvalidKeySpecException,Public Methods,,,N/A
+InvalidKeySpecException,Cyclomatic,,,N/A
+InvalidKeySpecException,Cohesion,,,N/A
+InvalidTelnetOptionException,Coupled,2,2,0
+InvalidTelnetOptionException,Derived,0,0,0
+InvalidTelnetOptionException,Public Methods,0,0,0
+InvalidTelnetOptionException,Cyclomatic,2,2,0
+InvalidTelnetOptionException,Cohesion,0,0,0
+InvalidTelnetOptionExceptionTest,Coupled,3,3,0
+InvalidTelnetOptionExceptionTest,Derived,0,0,0
+InvalidTelnetOptionExceptionTest,Public Methods,0,0,0
+InvalidTelnetOptionExceptionTest,Cyclomatic,2,2,0
+InvalidTelnetOptionExceptionTest,Cohesion,0,0,0
+Iterable,Coupled,,,N/A
+Iterable,Derived,,,N/A
+Iterable,Public Methods,,,N/A
+Iterable,Cyclomatic,,,N/A
+Iterable,Cohesion,,,N/A
+Iterator,Coupled,,,N/A
+Iterator,Derived,,,N/A
+Iterator,Public Methods,,,N/A
+Iterator,Cyclomatic,,,N/A
+Iterator,Cohesion,,,N/A
+JarEntry,Coupled,,,N/A
+JarEntry,Derived,,,N/A
+JarEntry,Public Methods,,,N/A
+JarEntry,Cyclomatic,,,N/A
+JarEntry,Cohesion,,,N/A
+JarFile,Coupled,,,N/A
+JarFile,Derived,,,N/A
+JarFile,Public Methods,,,N/A
+JarFile,Cyclomatic,,,N/A
+JarFile,Cohesion,,,N/A
+KeyManager,Coupled,,,N/A
+KeyManager,Derived,,,N/A
+KeyManager,Public Methods,,,N/A
+KeyManager,Cyclomatic,,,N/A
+KeyManager,Cohesion,,,N/A
+KeyManagerUtils,Coupled,12,12,0
+KeyManagerUtils,Derived,0,0,0
+KeyManagerUtils,Public Methods,6,6,0
+KeyManagerUtils,Cyclomatic,10,10,0
+KeyManagerUtils,Cohesion,0,0,0
+KeyStore,Coupled,,,N/A
+KeyStore,Derived,,,N/A
+KeyStore,Public Methods,,,N/A
+KeyStore,Cyclomatic,,,N/A
+KeyStore,Cohesion,,,N/A
+KeyStoreException,Coupled,,,N/A
+KeyStoreException,Derived,,,N/A
+KeyStoreException,Public Methods,,,N/A
+KeyStoreException,Cyclomatic,,,N/A
+KeyStoreException,Cohesion,,,N/A
+LinkedList,Coupled,,,N/A
+LinkedList,Derived,,,N/A
+LinkedList,Public Methods,,,N/A
+LinkedList,Cyclomatic,,,N/A
+LinkedList,Cohesion,,,N/A
+List,Coupled,,,N/A
+List,Derived,,,N/A
+List,Public Methods,,,N/A
+List,Cyclomatic,,,N/A
+List,Cohesion,,,N/A
+ListIterator,Coupled,,,N/A
+ListIterator,Derived,,,N/A
+ListIterator,Public Methods,,,N/A
+ListIterator,Cyclomatic,,,N/A
+ListIterator,Cohesion,,,N/A
+ListNewsgroups,Coupled,6,6,0
+ListNewsgroups,Derived,0,0,0
+ListNewsgroups,Public Methods,1,1,0
+ListNewsgroups,Cyclomatic,9,9,0
+ListNewsgroups,Cohesion,0,0,0
+ListenerList,Coupled,3,3,0
+ListenerList,Derived,0,0,0
+ListenerList,Public Methods,0,0,0
+ListenerList,Cyclomatic,5,5,0
+ListenerList,Cohesion,0,0,0
+ListingFunctionalTest,Coupled,16,16,0
+ListingFunctionalTest,Derived,0,0,0
+ListingFunctionalTest,Public Methods,1,1,0
+ListingFunctionalTest,Cyclomatic,25,26,1
+ListingFunctionalTest,Cohesion,63,66,3
+Locale,Coupled,,,N/A
+Locale,Derived,,,N/A
+Locale,Public Methods,,,N/A
+Locale,Cyclomatic,,,N/A
+Locale,Cohesion,,,N/A
+Long,Coupled,,,N/A
+Long,Derived,,,N/A
+Long,Public Methods,,,N/A
+Long,Cyclomatic,,,N/A
+Long,Cohesion,,,N/A
+MLSDComparison,Coupled,19,19,0
+MLSDComparison,Derived,0,0,0
+MLSDComparison,Public Methods,0,0,0
+MLSDComparison,Cyclomatic,19,19,0
+MLSDComparison,Cohesion,88,88,0
+MLSxEntryParser,Coupled,9,9,0
+MLSxEntryParser,Derived,0,0,0
+MLSxEntryParser,Public Methods,2,2,0
+MLSxEntryParser,Cyclomatic,34,34,0
+MLSxEntryParser,Cohesion,80,80,0
+MVSFTPEntryParser,Coupled,7,7,0
+MVSFTPEntryParser,Derived,0,0,0
+MVSFTPEntryParser,Public Methods,0,0,0
+MVSFTPEntryParser,Cyclomatic,36,36,0
+MVSFTPEntryParser,Cohesion,77,77,0
+MVSFTPEntryParserTest,Coupled,9,9,0
+MVSFTPEntryParserTest,Derived,0,0,0
+MVSFTPEntryParserTest,Public Methods,0,0,0
+MVSFTPEntryParserTest,Cyclomatic,15,15,0
+MVSFTPEntryParserTest,Cohesion,0,0,0
+Mac,Coupled,,,N/A
+Mac,Derived,,,N/A
+Mac,Public Methods,,,N/A
+Mac,Cyclomatic,,,N/A
+Mac,Cohesion,,,N/A
+MacOsPeterFTPEntryParser,Coupled,6,6,0
+MacOsPeterFTPEntryParser,Derived,0,0,0
+MacOsPeterFTPEntryParser,Public Methods,0,0,0
+MacOsPeterFTPEntryParser,Cyclomatic,21,21,0
+MacOsPeterFTPEntryParser,Cohesion,0,0,0
+MacOsPeterFTPEntryParserTest,Coupled,7,7,0
+MacOsPeterFTPEntryParserTest,Derived,0,0,0
+MacOsPeterFTPEntryParserTest,Public Methods,0,0,0
+MacOsPeterFTPEntryParserTest,Cyclomatic,9,9,0
+MacOsPeterFTPEntryParserTest,Cohesion,0,0,0
+Main,Coupled,10,10,0
+Main,Derived,0,0,0
+Main,Public Methods,1,1,0
+Main,Cyclomatic,10,10,0
+Main,Cohesion,0,0,0
+MalformedServerReplyException,Coupled,1,1,0
+MalformedServerReplyException,Derived,0,0,0
+MalformedServerReplyException,Public Methods,0,0,0
+MalformedServerReplyException,Cyclomatic,2,2,0
+MalformedServerReplyException,Cohesion,0,0,0
+Map,Coupled,,,N/A
+Map,Derived,,,N/A
+Map,Public Methods,,,N/A
+Map,Cyclomatic,,,N/A
+Map,Cohesion,,,N/A
+MatchResult,Coupled,,,N/A
+MatchResult,Derived,,,N/A
+MatchResult,Public Methods,,,N/A
+MatchResult,Cyclomatic,,,N/A
+MatchResult,Cohesion,,,N/A
+Matcher,Coupled,,,N/A
+Matcher,Derived,,,N/A
+Matcher,Public Methods,,,N/A
+Matcher,Cyclomatic,,,N/A
+Matcher,Cohesion,,,N/A
+MessageDigest,Coupled,,,N/A
+MessageDigest,Derived,,,N/A
+MessageDigest,Public Methods,,,N/A
+MessageDigest,Cyclomatic,,,N/A
+MessageDigest,Cohesion,,,N/A
+MessageThreading,Coupled,11,11,0
+MessageThreading,Derived,0,0,0
+MessageThreading,Public Methods,1,1,0
+MessageThreading,Cyclomatic,7,7,0
+MessageThreading,Cohesion,0,0,0
+Method,Coupled,,,N/A
+Method,Derived,,,N/A
+Method,Public Methods,,,N/A
+Method,Cyclomatic,,,N/A
+Method,Cohesion,,,N/A
+NNTP,Coupled,16,16,0
+NNTP,Derived,1,1,0
+NNTP,Public Methods,0,0,0
+NNTP,Cyclomatic,53,53,0
+NNTP,Cohesion,91,91,0
+NNTPClient,Coupled,26,26,0
+NNTPClient,Derived,0,0,0
+NNTPClient,Public Methods,3,3,0
+NNTPClient,Cyclomatic,137,137,0
+NNTPClient,Cohesion,0,0,0
+NNTPCommand,Coupled,1,1,0
+NNTPCommand,Derived,0,0,0
+NNTPCommand,Public Methods,1,1,0
+NNTPCommand,Cyclomatic,2,2,0
+NNTPCommand,Cohesion,0,0,0
+NNTPConnectionClosedException,Coupled,1,1,0
+NNTPConnectionClosedException,Derived,0,0,0
+NNTPConnectionClosedException,Public Methods,0,0,0
+NNTPConnectionClosedException,Cyclomatic,2,2,0
+NNTPConnectionClosedException,Cohesion,0,0,0
+NNTPReply,Coupled,0,0,0
+NNTPReply,Derived,0,0,0
+NNTPReply,Public Methods,5,5,0
+NNTPReply,Cyclomatic,6,6,0
+NNTPReply,Cohesion,0,0,0
+NNTPUtils,Coupled,6,6,0
+NNTPUtils,Derived,0,0,0
+NNTPUtils,Public Methods,1,1,0
+NNTPUtils,Cyclomatic,2,2,0
+NNTPUtils,Cohesion,0,0,0
+NTFTPEntryParser,Coupled,7,7,0
+NTFTPEntryParser,Derived,0,0,0
+NTFTPEntryParser,Public Methods,0,0,0
+NTFTPEntryParser,Cyclomatic,10,10,0
+NTFTPEntryParser,Cohesion,50,50,0
+NTFTPEntryParserTest,Coupled,9,9,0
+NTFTPEntryParserTest,Derived,0,0,0
+NTFTPEntryParserTest,Public Methods,0,0,0
+NTFTPEntryParserTest,Cyclomatic,13,13,0
+NTFTPEntryParserTest,Cohesion,0,0,0
+NTPClient,Coupled,14,14,0
+NTPClient,Derived,0,0,0
+NTPClient,Public Methods,2,2,0
+NTPClient,Cyclomatic,19,19,0
+NTPClient,Cohesion,0,0,0
+NTPUDPClient,Coupled,7,7,0
+NTPUDPClient,Derived,0,0,0
+NTPUDPClient,Public Methods,0,0,0
+NTPUDPClient,Cyclomatic,5,5,0
+NTPUDPClient,Cohesion,25,25,0
+NetwareFTPEntryParser,Coupled,5,5,0
+NetwareFTPEntryParser,Derived,0,0,0
+NetwareFTPEntryParser,Public Methods,0,0,0
+NetwareFTPEntryParser,Cyclomatic,9,9,0
+NetwareFTPEntryParser,Cohesion,0,0,0
+NetwareFTPEntryParserTest,Coupled,7,7,0
+NetwareFTPEntryParserTest,Derived,0,0,0
+NetwareFTPEntryParserTest,Public Methods,0,0,0
+NetwareFTPEntryParserTest,Cyclomatic,6,6,0
+NetwareFTPEntryParserTest,Cohesion,0,0,0
+NewGroupsOrNewsQuery,Coupled,4,4,0
+NewGroupsOrNewsQuery,Derived,0,0,0
+NewGroupsOrNewsQuery,Public Methods,0,0,0
+NewGroupsOrNewsQuery,Cyclomatic,24,24,0
+NewGroupsOrNewsQuery,Cohesion,73,73,0
+NewsgroupInfo,Coupled,2,2,0
+NewsgroupInfo,Derived,0,0,0
+NewsgroupInfo,Public Methods,0,0,0
+NewsgroupInfo,Cyclomatic,13,13,0
+NewsgroupInfo,Cohesion,80,80,0
+NewsgroupIterator,Coupled,3,3,0
+NewsgroupIterator,Derived,0,0,0
+NewsgroupIterator,Public Methods,0,0,0
+NewsgroupIterator,Cyclomatic,5,5,0
+NewsgroupIterator,Cohesion,20,20,0
+NoSuchAlgorithmException,Coupled,,,N/A
+NoSuchAlgorithmException,Derived,,,N/A
+NoSuchAlgorithmException,Public Methods,,,N/A
+NoSuchAlgorithmException,Cyclomatic,,,N/A
+NoSuchAlgorithmException,Cohesion,,,N/A
+NoSuchElementException,Coupled,,,N/A
+NoSuchElementException,Derived,,,N/A
+NoSuchElementException,Public Methods,,,N/A
+NoSuchElementException,Cyclomatic,,,N/A
+NoSuchElementException,Cohesion,,,N/A
+NtpUtils,Coupled,3,3,0
+NtpUtils,Derived,0,0,0
+NtpUtils,Public Methods,4,4,0
+NtpUtils,Cyclomatic,18,18,0
+NtpUtils,Cohesion,0,0,0
+NtpV3Impl,Coupled,6,6,0
+NtpV3Impl,Derived,0,0,0
+NtpV3Impl,Public Methods,2,2,0
+NtpV3Impl,Cyclomatic,54,54,0
+NtpV3Impl,Cohesion,76,76,0
+NullPointerException,Coupled,,,N/A
+NullPointerException,Derived,,,N/A
+NullPointerException,Public Methods,,,N/A
+NullPointerException,Cyclomatic,,,N/A
+NullPointerException,Cohesion,,,N/A
+NumberFormat,Coupled,,,N/A
+NumberFormat,Derived,,,N/A
+NumberFormat,Public Methods,,,N/A
+NumberFormat,Cyclomatic,,,N/A
+NumberFormat,Cohesion,,,N/A
+NumberFormatException,Coupled,,,N/A
+NumberFormatException,Derived,,,N/A
+NumberFormatException,Public Methods,,,N/A
+NumberFormatException,Cyclomatic,,,N/A
+NumberFormatException,Cohesion,,,N/A
+OS2FTPEntryParser,Coupled,5,5,0
+OS2FTPEntryParser,Derived,0,0,0
+OS2FTPEntryParser,Public Methods,0,0,0
+OS2FTPEntryParser,Cyclomatic,7,7,0
+OS2FTPEntryParser,Cohesion,0,0,0
+OS2FTPEntryParserTest,Coupled,7,7,0
+OS2FTPEntryParserTest,Derived,0,0,0
+OS2FTPEntryParserTest,Public Methods,0,0,0
+OS2FTPEntryParserTest,Cyclomatic,6,6,0
+OS2FTPEntryParserTest,Cohesion,0,0,0
+OS400FTPEntryParser,Coupled,6,6,0
+OS400FTPEntryParser,Derived,0,0,0
+OS400FTPEntryParser,Public Methods,0,0,0
+OS400FTPEntryParser,Cyclomatic,11,11,0
+OS400FTPEntryParser,Cohesion,0,0,0
+OS400FTPEntryParserTest,Coupled,9,9,0
+OS400FTPEntryParserTest,Derived,0,0,0
+OS400FTPEntryParserTest,Public Methods,0,0,0
+OS400FTPEntryParserTest,Cyclomatic,8,8,0
+OS400FTPEntryParserTest,Cohesion,0,0,0
+OutputStream,Coupled,,,N/A
+OutputStream,Derived,,,N/A
+OutputStream,Public Methods,,,N/A
+OutputStream,Cyclomatic,,,N/A
+OutputStream,Cohesion,,,N/A
+OutputStreamWriter,Coupled,,,N/A
+OutputStreamWriter,Derived,,,N/A
+OutputStreamWriter,Public Methods,,,N/A
+OutputStreamWriter,Cyclomatic,,,N/A
+OutputStreamWriter,Cohesion,,,N/A
+POP3,Coupled,18,18,0
+POP3,Derived,1,1,0
+POP3,Public Methods,0,0,0
+POP3,Cyclomatic,24,24,0
+POP3,Cohesion,77,77,0
+POP3Client,Coupled,13,13,0
+POP3Client,Derived,1,1,0
+POP3Client,Public Methods,2,2,0
+POP3Client,Cyclomatic,50,50,0
+POP3Client,Cohesion,0,0,0
+POP3ClientCommandsTest,Coupled,10,10,0
+POP3ClientCommandsTest,Derived,0,0,0
+POP3ClientCommandsTest,Public Methods,0,0,0
+POP3ClientCommandsTest,Cyclomatic,38,38,0
+POP3ClientCommandsTest,Cohesion,67,67,0
+POP3ClientTest,Coupled,8,8,0
+POP3ClientTest,Derived,0,0,0
+POP3ClientTest,Public Methods,0,0,0
+POP3ClientTest,Cyclomatic,11,11,0
+POP3ClientTest,Cohesion,69,69,0
+POP3Command,Coupled,2,2,0
+POP3Command,Derived,0,0,0
+POP3Command,Public Methods,1,1,0
+POP3Command,Cyclomatic,2,2,0
+POP3Command,Cohesion,0,0,0
+POP3ConstructorTest,Coupled,9,9,0
+POP3ConstructorTest,Derived,0,0,0
+POP3ConstructorTest,Public Methods,0,0,0
+POP3ConstructorTest,Cyclomatic,7,7,0
+POP3ConstructorTest,Cohesion,81,81,0
+POP3Mail,Coupled,11,11,0
+POP3Mail,Derived,0,0,0
+POP3Mail,Public Methods,2,2,0
+POP3Mail,Cyclomatic,16,16,0
+POP3Mail,Cohesion,0,0,0
+POP3MessageInfo,Coupled,1,1,0
+POP3MessageInfo,Derived,0,0,0
+POP3MessageInfo,Public Methods,0,0,0
+POP3MessageInfo,Cyclomatic,4,4,0
+POP3MessageInfo,Cohesion,75,75,0
+POP3Reply,Coupled,0,0,0
+POP3Reply,Derived,0,0,0
+POP3Reply,Public Methods,0,0,0
+POP3Reply,Cyclomatic,1,1,0
+POP3Reply,Cohesion,0,0,0
+POP3SClient,Coupled,15,15,0
+POP3SClient,Derived,1,1,0
+POP3SClient,Public Methods,0,0,0
+POP3SClient,Cyclomatic,27,27,0
+POP3SClient,Cohesion,89,89,0
+ParseException,Coupled,,,N/A
+ParseException,Derived,,,N/A
+ParseException,Public Methods,,,N/A
+ParseException,Cyclomatic,,,N/A
+ParseException,Cohesion,,,N/A
+ParsePosition,Coupled,,,N/A
+ParsePosition,Derived,,,N/A
+ParsePosition,Public Methods,,,N/A
+ParsePosition,Cyclomatic,,,N/A
+ParsePosition,Cohesion,,,N/A
+ParserInitializationException,Coupled,3,3,0
+ParserInitializationException,Derived,0,0,0
+ParserInitializationException,Public Methods,0,0,0
+ParserInitializationException,Cyclomatic,3,3,0
+ParserInitializationException,Cohesion,0,0,0
+Pattern,Coupled,,,N/A
+Pattern,Derived,,,N/A
+Pattern,Public Methods,,,N/A
+Pattern,Cyclomatic,,,N/A
+Pattern,Cohesion,,,N/A
+PatternSyntaxException,Coupled,,,N/A
+PatternSyntaxException,Derived,,,N/A
+PatternSyntaxException,Public Methods,,,N/A
+PatternSyntaxException,Cyclomatic,,,N/A
+PatternSyntaxException,Cohesion,,,N/A
+PipedInputStream,Coupled,,,N/A
+PipedInputStream,Derived,,,N/A
+PipedInputStream,Public Methods,,,N/A
+PipedInputStream,Cyclomatic,,,N/A
+PipedInputStream,Cohesion,,,N/A
+PipedOutputStream,Coupled,,,N/A
+PipedOutputStream,Derived,,,N/A
+PipedOutputStream,Public Methods,,,N/A
+PipedOutputStream,Cyclomatic,,,N/A
+PipedOutputStream,Cohesion,,,N/A
+PostMessage,Coupled,15,15,0
+PostMessage,Derived,0,0,0
+PostMessage,Public Methods,1,1,0
+PostMessage,Cyclomatic,12,12,0
+PostMessage,Cohesion,0,0,0
+Principal,Coupled,,,N/A
+Principal,Derived,,,N/A
+Principal,Public Methods,,,N/A
+Principal,Cyclomatic,,,N/A
+Principal,Cohesion,,,N/A
+PrintCommandListener,Coupled,6,6,0
+PrintCommandListener,Derived,0,0,0
+PrintCommandListener,Public Methods,0,0,0
+PrintCommandListener,Cyclomatic,18,18,0
+PrintCommandListener,Cohesion,77,77,0
+PrintStream,Coupled,,,N/A
+PrintStream,Derived,,,N/A
+PrintStream,Public Methods,,,N/A
+PrintStream,Cyclomatic,,,N/A
+PrintStream,Cohesion,,,N/A
+PrintWriter,Coupled,,,N/A
+PrintWriter,Derived,,,N/A
+PrintWriter,Public Methods,,,N/A
+PrintWriter,Cyclomatic,,,N/A
+PrintWriter,Cohesion,,,N/A
+PrivateKey,Coupled,,,N/A
+PrivateKey,Derived,,,N/A
+PrivateKey,Public Methods,,,N/A
+PrivateKey,Cyclomatic,,,N/A
+PrivateKey,Cohesion,,,N/A
+Properties,Coupled,,,N/A
+Properties,Derived,,,N/A
+Properties,Public Methods,,,N/A
+Properties,Cyclomatic,,,N/A
+Properties,Cohesion,,,N/A
+PropertiesSingleton,Coupled,4,4,0
+PropertiesSingleton,Derived,0,0,0
+PropertiesSingleton,Public Methods,0,0,0
+PropertiesSingleton,Cyclomatic,0,0,0
+PropertiesSingleton,Cohesion,0,0,0
+ProtocolCommandEvent,Coupled,1,1,0
+ProtocolCommandEvent,Derived,0,0,0
+ProtocolCommandEvent,Public Methods,0,0,0
+ProtocolCommandEvent,Cyclomatic,7,7,0
+ProtocolCommandEvent,Cohesion,57,57,0
+ProtocolCommandSupport,Coupled,5,5,0
+ProtocolCommandSupport,Derived,0,0,0
+ProtocolCommandSupport,Public Methods,0,0,0
+ProtocolCommandSupport,Cyclomatic,8,8,0
+ProtocolCommandSupport,Cohesion,25,25,0
+Proxy,Coupled,,,N/A
+Proxy,Derived,,,N/A
+Proxy,Public Methods,,,N/A
+Proxy,Cyclomatic,,,N/A
+Proxy,Cohesion,,,N/A
+PushbackInputStream,Coupled,,,N/A
+PushbackInputStream,Derived,,,N/A
+PushbackInputStream,Public Methods,,,N/A
+PushbackInputStream,Cyclomatic,,,N/A
+PushbackInputStream,Cohesion,,,N/A
+RCommandClient,Coupled,12,12,0
+RCommandClient,Derived,1,1,0
+RCommandClient,Public Methods,0,0,0
+RCommandClient,Cyclomatic,20,20,0
+RCommandClient,Cohesion,0,0,0
+RExecClient,Coupled,9,9,0
+RExecClient,Derived,1,1,0
+RExecClient,Public Methods,0,0,0
+RExecClient,Cyclomatic,16,16,0
+RExecClient,Cohesion,65,65,0
+RLoginClient,Coupled,2,2,0
+RLoginClient,Derived,0,0,0
+RLoginClient,Public Methods,0,0,0
+RLoginClient,Cyclomatic,3,3,0
+RLoginClient,Cohesion,0,0,0
+Random,Coupled,,,N/A
+Random,Derived,,,N/A
+Random,Public Methods,,,N/A
+Random,Cyclomatic,,,N/A
+Random,Cohesion,,,N/A
+Reader,Coupled,,,N/A
+Reader,Derived,,,N/A
+Reader,Public Methods,,,N/A
+Reader,Cyclomatic,,,N/A
+Reader,Cohesion,,,N/A
+RegexFTPFileEntryParserImpl,Coupled,7,7,0
+RegexFTPFileEntryParserImpl,Derived,4,4,0
+RegexFTPFileEntryParserImpl,Public Methods,0,0,0
+RegexFTPFileEntryParserImpl,Cyclomatic,11,11,0
+RegexFTPFileEntryParserImpl,Cohesion,61,61,0
+RelayPath,Coupled,5,5,0
+RelayPath,Derived,0,0,0
+RelayPath,Public Methods,0,0,0
+RelayPath,Cyclomatic,5,5,0
+RelayPath,Cohesion,17,17,0
+ReplyIterator,Coupled,8,8,0
+ReplyIterator,Derived,0,0,0
+ReplyIterator,Public Methods,0,0,0
+ReplyIterator,Cyclomatic,13,13,0
+ReplyIterator,Cohesion,61,61,0
+Runnable,Coupled,,,N/A
+Runnable,Derived,,,N/A
+Runnable,Public Methods,,,N/A
+Runnable,Cyclomatic,,,N/A
+Runnable,Cohesion,,,N/A
+RuntimeException,Coupled,,,N/A
+RuntimeException,Derived,,,N/A
+RuntimeException,Public Methods,,,N/A
+RuntimeException,Cyclomatic,,,N/A
+RuntimeException,Cohesion,,,N/A
+SEARCH_CRITERIA,Coupled,1,1,0
+SEARCH_CRITERIA,Derived,0,0,0
+SEARCH_CRITERIA,Public Methods,0,0,0
+SEARCH_CRITERIA,Cyclomatic,0,0,0
+SEARCH_CRITERIA,Cohesion,,,N/A
+SMTP,Coupled,17,17,0
+SMTP,Derived,1,1,0
+SMTP,Public Methods,0,0,0
+SMTP,Cyclomatic,43,43,0
+SMTP,Cohesion,90,90,0
+SMTPClient,Coupled,7,7,0
+SMTPClient,Derived,1,1,0
+SMTPClient,Public Methods,0,0,0
+SMTPClient,Cyclomatic,30,30,0
+SMTPClient,Cohesion,0,0,0
+SMTPCommand,Coupled,2,2,0
+SMTPCommand,Derived,0,0,0
+SMTPCommand,Public Methods,1,1,0
+SMTPCommand,Cyclomatic,2,2,0
+SMTPCommand,Cohesion,0,0,0
+SMTPConnectionClosedException,Coupled,1,1,0
+SMTPConnectionClosedException,Derived,0,0,0
+SMTPConnectionClosedException,Public Methods,0,0,0
+SMTPConnectionClosedException,Cyclomatic,2,2,0
+SMTPConnectionClosedException,Cohesion,0,0,0
+SMTPMail,Coupled,17,17,0
+SMTPMail,Derived,0,0,0
+SMTPMail,Public Methods,1,1,0
+SMTPMail,Cyclomatic,10,10,0
+SMTPMail,Cohesion,0,0,0
+SMTPReply,Coupled,0,0,0
+SMTPReply,Derived,0,0,0
+SMTPReply,Public Methods,5,5,0
+SMTPReply,Cyclomatic,6,6,0
+SMTPReply,Cohesion,0,0,0
+SMTPSClient,Coupled,15,15,0
+SMTPSClient,Derived,1,1,0
+SMTPSClient,Public Methods,0,0,0
+SMTPSClient,Cyclomatic,25,26,1
+SMTPSClient,Cohesion,87,86,-1
+SSLContext,Coupled,,,N/A
+SSLContext,Derived,,,N/A
+SSLContext,Public Methods,,,N/A
+SSLContext,Cyclomatic,,,N/A
+SSLContext,Cohesion,,,N/A
+SSLContextUtils,Coupled,6,6,0
+SSLContextUtils,Derived,0,0,0
+SSLContextUtils,Public Methods,2,2,0
+SSLContextUtils,Cyclomatic,6,6,0
+SSLContextUtils,Cohesion,0,0,0
+SSLException,Coupled,,,N/A
+SSLException,Derived,,,N/A
+SSLException,Public Methods,,,N/A
+SSLException,Cyclomatic,,,N/A
+SSLException,Cohesion,,,N/A
+SSLServerSocket,Coupled,,,N/A
+SSLServerSocket,Derived,,,N/A
+SSLServerSocket,Public Methods,,,N/A
+SSLServerSocket,Cyclomatic,,,N/A
+SSLServerSocket,Cohesion,,,N/A
+SSLSocket,Coupled,,,N/A
+SSLSocket,Derived,,,N/A
+SSLSocket,Public Methods,,,N/A
+SSLSocket,Cyclomatic,,,N/A
+SSLSocket,Cohesion,,,N/A
+SSLSocketFactory,Coupled,,,N/A
+SSLSocketFactory,Derived,,,N/A
+SSLSocketFactory,Public Methods,,,N/A
+SSLSocketFactory,Cyclomatic,,,N/A
+SSLSocketFactory,Cohesion,,,N/A
+STATUS_DATA_ITEMS,Coupled,1,1,0
+STATUS_DATA_ITEMS,Derived,0,0,0
+STATUS_DATA_ITEMS,Public Methods,0,0,0
+STATUS_DATA_ITEMS,Cyclomatic,0,0,0
+STATUS_DATA_ITEMS,Cohesion,,,N/A
+Scanner,Coupled,,,N/A
+Scanner,Derived,,,N/A
+Scanner,Public Methods,,,N/A
+Scanner,Cyclomatic,,,N/A
+Scanner,Cohesion,,,N/A
+SecretKeySpec,Coupled,,,N/A
+SecretKeySpec,Derived,,,N/A
+SecretKeySpec,Public Methods,,,N/A
+SecretKeySpec,Cyclomatic,,,N/A
+SecretKeySpec,Cohesion,,,N/A
+Serializable,Coupled,,,N/A
+Serializable,Derived,,,N/A
+Serializable,Public Methods,,,N/A
+Serializable,Cyclomatic,,,N/A
+Serializable,Cohesion,,,N/A
+ServerMode,Coupled,1,1,0
+ServerMode,Derived,0,0,0
+ServerMode,Public Methods,0,0,0
+ServerMode,Cyclomatic,0,0,0
+ServerMode,Cohesion,,,N/A
+ServerSocket,Coupled,,,N/A
+ServerSocket,Derived,,,N/A
+ServerSocket,Public Methods,,,N/A
+ServerSocket,Cyclomatic,,,N/A
+ServerSocket,Cohesion,,,N/A
+ServerSocketFactory,Coupled,,,N/A
+ServerSocketFactory,Derived,,,N/A
+ServerSocketFactory,Public Methods,,,N/A
+ServerSocketFactory,Cyclomatic,,,N/A
+ServerSocketFactory,Cohesion,,,N/A
+ServerToServerFTP,Coupled,10,10,0
+ServerToServerFTP,Derived,0,0,0
+ServerToServerFTP,Public Methods,1,1,0
+ServerToServerFTP,Cyclomatic,22,22,0
+ServerToServerFTP,Cohesion,0,0,0
+Set,Coupled,,,N/A
+Set,Derived,,,N/A
+Set,Public Methods,,,N/A
+Set,Cyclomatic,,,N/A
+Set,Cohesion,,,N/A
+SimpleDateFormat,Coupled,,,N/A
+SimpleDateFormat,Derived,,,N/A
+SimpleDateFormat,Public Methods,,,N/A
+SimpleDateFormat,Cyclomatic,,,N/A
+SimpleDateFormat,Cohesion,,,N/A
+SimpleNNTPHeader,Coupled,3,3,0
+SimpleNNTPHeader,Derived,0,0,0
+SimpleNNTPHeader,Public Methods,0,0,0
+SimpleNNTPHeader,Cyclomatic,9,9,0
+SimpleNNTPHeader,Cohesion,57,57,0
+SimpleOptionHandler,Coupled,1,1,0
+SimpleOptionHandler,Derived,0,0,0
+SimpleOptionHandler,Public Methods,0,0,0
+SimpleOptionHandler,Cyclomatic,5,5,0
+SimpleOptionHandler,Cohesion,0,0,0
+SimpleOptionHandlerTest,Coupled,4,4,0
+SimpleOptionHandlerTest,Derived,0,0,0
+SimpleOptionHandlerTest,Public Methods,0,0,0
+SimpleOptionHandlerTest,Cyclomatic,4,4,0
+SimpleOptionHandlerTest,Cohesion,0,0,0
+SimpleSMTPHeader,Coupled,4,4,0
+SimpleSMTPHeader,Derived,0,0,0
+SimpleSMTPHeader,Public Methods,0,0,0
+SimpleSMTPHeader,Cyclomatic,8,8,0
+SimpleSMTPHeader,Cohesion,40,40,0
+Socket,Coupled,,,N/A
+Socket,Derived,,,N/A
+Socket,Public Methods,,,N/A
+Socket,Cyclomatic,,,N/A
+Socket,Cohesion,,,N/A
+SocketClient,Coupled,15,16,1
+SocketClient,Derived,13,13,0
+SocketClient,Public Methods,0,0,0
+SocketClient,Cyclomatic,68,71,3
+SocketClient,Cohesion,90,91,1
+SocketClientFunctionalTest,Coupled,6,6,0
+SocketClientFunctionalTest,Derived,0,0,0
+SocketClientFunctionalTest,Public Methods,0,0,0
+SocketClientFunctionalTest,Cyclomatic,2,2,0
+SocketClientFunctionalTest,Cohesion,50,50,0
+SocketClientTest,Coupled,5,5,0
+SocketClientTest,Derived,0,0,0
+SocketClientTest,Public Methods,0,0,0
+SocketClientTest,Cyclomatic,1,1,0
+SocketClientTest,Cohesion,0,0,0
+SocketException,Coupled,,,N/A
+SocketException,Derived,,,N/A
+SocketException,Public Methods,,,N/A
+SocketException,Cyclomatic,,,N/A
+SocketException,Cohesion,,,N/A
+SocketFactory,Coupled,,,N/A
+SocketFactory,Derived,,,N/A
+SocketFactory,Public Methods,,,N/A
+SocketFactory,Cyclomatic,,,N/A
+SocketFactory,Cohesion,,,N/A
+SocketInputStream,Coupled,4,4,0
+SocketInputStream,Derived,0,0,0
+SocketInputStream,Public Methods,0,0,0
+SocketInputStream,Cyclomatic,2,2,0
+SocketInputStream,Cohesion,0,0,0
+SocketOutputStream,Coupled,4,4,0
+SocketOutputStream,Derived,0,0,0
+SocketOutputStream,Public Methods,0,0,0
+SocketOutputStream,Cyclomatic,3,3,0
+SocketOutputStream,Cohesion,33,33,0
+SocketTimeoutException,Coupled,,,N/A
+SocketTimeoutException,Derived,,,N/A
+SocketTimeoutException,Public Methods,,,N/A
+SocketTimeoutException,Cyclomatic,,,N/A
+SocketTimeoutException,Cohesion,,,N/A
+String,Coupled,,,N/A
+String,Derived,,,N/A
+String,Public Methods,,,N/A
+String,Cyclomatic,,,N/A
+String,Cohesion,,,N/A
+StringBuffer,Coupled,,,N/A
+StringBuffer,Derived,,,N/A
+StringBuffer,Public Methods,,,N/A
+StringBuffer,Cyclomatic,,,N/A
+StringBuffer,Cohesion,,,N/A
+StringBuilder,Coupled,,,N/A
+StringBuilder,Derived,,,N/A
+StringBuilder,Public Methods,,,N/A
+StringBuilder,Cyclomatic,,,N/A
+StringBuilder,Cohesion,,,N/A
+StringReader,Coupled,,,N/A
+StringReader,Derived,,,N/A
+StringReader,Public Methods,,,N/A
+StringReader,Cyclomatic,,,N/A
+StringReader,Cohesion,,,N/A
+StringTokenizer,Coupled,,,N/A
+StringTokenizer,Derived,,,N/A
+StringTokenizer,Public Methods,,,N/A
+StringTokenizer,Cyclomatic,,,N/A
+StringTokenizer,Cohesion,,,N/A
+StringWriter,Coupled,,,N/A
+StringWriter,Derived,,,N/A
+StringWriter,Public Methods,,,N/A
+StringWriter,Cyclomatic,,,N/A
+StringWriter,Cohesion,,,N/A
+SubnetInfo,Coupled,4,4,0
+SubnetInfo,Derived,0,0,0
+SubnetInfo,Public Methods,0,0,0
+SubnetInfo,Cyclomatic,28,28,0
+SubnetInfo,Cohesion,0,0,0
+SubnetUtils,Coupled,6,6,0
+SubnetUtils,Derived,0,0,0
+SubnetUtils,Public Methods,0,0,0
+SubnetUtils,Cyclomatic,21,21,0
+SubnetUtils,Cohesion,91,91,0
+SubnetUtilsExample,Coupled,5,5,0
+SubnetUtilsExample,Derived,0,0,0
+SubnetUtilsExample,Public Methods,1,1,0
+SubnetUtilsExample,Cyclomatic,3,3,0
+SubnetUtilsExample,Cohesion,0,0,0
+SubnetUtilsTest,Coupled,5,5,0
+SubnetUtilsTest,Derived,0,0,0
+SubnetUtilsTest,Public Methods,0,0,0
+SubnetUtilsTest,Cyclomatic,16,16,0
+SubnetUtilsTest,Cohesion,0,0,0
+SuppressGAOptionHandler,Coupled,2,2,0
+SuppressGAOptionHandler,Derived,0,0,0
+SuppressGAOptionHandler,Public Methods,0,0,0
+SuppressGAOptionHandler,Cyclomatic,5,5,0
+SuppressGAOptionHandler,Cohesion,0,0,0
+SuppressGAOptionHandlerTest,Coupled,5,5,0
+SuppressGAOptionHandlerTest,Derived,0,0,0
+SuppressGAOptionHandlerTest,Public Methods,0,0,0
+SuppressGAOptionHandlerTest,Cyclomatic,4,4,0
+SuppressGAOptionHandlerTest,Cohesion,0,0,0
+TFTP,Coupled,8,8,0
+TFTP,Derived,1,1,0
+TFTP,Public Methods,1,1,0
+TFTP,Cyclomatic,12,12,0
+TFTP,Cohesion,61,61,0
+TFTPAckPacket,Coupled,4,4,0
+TFTPAckPacket,Derived,0,0,0
+TFTPAckPacket,Public Methods,0,0,0
+TFTPAckPacket,Cyclomatic,7,7,0
+TFTPAckPacket,Cohesion,0,0,0
+TFTPClient,Coupled,17,17,0
+TFTPClient,Derived,0,0,0
+TFTPClient,Public Methods,0,0,0
+TFTPClient,Cyclomatic,50,50,0
+TFTPClient,Cohesion,55,55,0
+TFTPDataPacket,Coupled,4,4,0
+TFTPDataPacket,Derived,0,0,0
+TFTPDataPacket,Public Methods,0,0,0
+TFTPDataPacket,Cyclomatic,16,16,0
+TFTPDataPacket,Cohesion,45,45,0
+TFTPErrorPacket,Coupled,6,6,0
+TFTPErrorPacket,Derived,0,0,0
+TFTPErrorPacket,Public Methods,0,0,0
+TFTPErrorPacket,Cyclomatic,9,9,0
+TFTPErrorPacket,Cohesion,17,17,0
+TFTPExample,Coupled,10,10,0
+TFTPExample,Derived,0,0,0
+TFTPExample,Public Methods,1,1,0
+TFTPExample,Cyclomatic,23,23,0
+TFTPExample,Cohesion,0,0,0
+TFTPPacket,Coupled,8,8,0
+TFTPPacket,Derived,4,4,0
+TFTPPacket,Public Methods,1,1,0
+TFTPPacket,Cyclomatic,13,13,0
+TFTPPacket,Cohesion,62,62,0
+TFTPPacketException,Coupled,1,1,0
+TFTPPacketException,Derived,0,0,0
+TFTPPacketException,Public Methods,0,0,0
+TFTPPacketException,Cyclomatic,2,2,0
+TFTPPacketException,Cohesion,0,0,0
+TFTPReadRequestPacket,Coupled,4,4,0
+TFTPReadRequestPacket,Derived,0,0,0
+TFTPReadRequestPacket,Public Methods,0,0,0
+TFTPReadRequestPacket,Cyclomatic,2,2,0
+TFTPReadRequestPacket,Cohesion,0,0,0
+TFTPRequestPacket,Coupled,6,6,0
+TFTPRequestPacket,Derived,2,2,0
+TFTPRequestPacket,Public Methods,0,0,0
+TFTPRequestPacket,Cyclomatic,13,13,0
+TFTPRequestPacket,Cohesion,17,17,0
+TFTPServer,Coupled,16,16,0
+TFTPServer,Derived,0,0,0
+TFTPServer,Public Methods,0,0,0
+TFTPServer,Cyclomatic,27,27,0
+TFTPServer,Cohesion,83,83,0
+TFTPServerPathTest,Coupled,10,10,0
+TFTPServerPathTest,Derived,0,0,0
+TFTPServerPathTest,Public Methods,0,0,0
+TFTPServerPathTest,Cyclomatic,6,6,0
+TFTPServerPathTest,Cohesion,0,0,0
+TFTPTest,Coupled,16,16,0
+TFTPTest,Derived,0,0,0
+TFTPTest,Public Methods,1,1,0
+TFTPTest,Cyclomatic,26,26,0
+TFTPTest,Cohesion,91,91,0
+TFTPTransfer,Coupled,27,27,0
+TFTPTransfer,Derived,0,0,0
+TFTPTransfer,Public Methods,0,0,0
+TFTPTransfer,Cyclomatic,59,59,0
+TFTPTransfer,Cohesion,58,58,0
+TFTPWriteRequestPacket,Coupled,4,4,0
+TFTPWriteRequestPacket,Derived,0,0,0
+TFTPWriteRequestPacket,Public Methods,0,0,0
+TFTPWriteRequestPacket,Cyclomatic,2,2,0
+TFTPWriteRequestPacket,Cohesion,0,0,0
+Telnet,Coupled,14,14,0
+Telnet,Derived,1,1,0
+Telnet,Public Methods,0,0,0
+Telnet,Cyclomatic,132,132,0
+Telnet,Cohesion,86,86,0
+TelnetClient,Coupled,14,14,0
+TelnetClient,Derived,0,0,0
+TelnetClient,Public Methods,0,0,0
+TelnetClient,Cyclomatic,29,29,0
+TelnetClient,Cohesion,83,83,0
+TelnetClientExample,Coupled,16,16,0
+TelnetClientExample,Derived,0,0,0
+TelnetClientExample,Public Methods,1,1,0
+TelnetClientExample,Cyclomatic,34,34,0
+TelnetClientExample,Cohesion,33,33,0
+TelnetClientFunctionalTest,Coupled,7,7,0
+TelnetClientFunctionalTest,Derived,0,0,0
+TelnetClientFunctionalTest,Public Methods,0,0,0
+TelnetClientFunctionalTest,Cyclomatic,10,10,0
+TelnetClientFunctionalTest,Cohesion,33,33,0
+TelnetClientTest,Coupled,20,20,0
+TelnetClientTest,Derived,0,0,0
+TelnetClientTest,Public Methods,0,0,0
+TelnetClientTest,Cyclomatic,74,74,0
+TelnetClientTest,Cohesion,74,74,0
+TelnetCommand,Coupled,1,1,0
+TelnetCommand,Derived,0,0,0
+TelnetCommand,Public Methods,2,2,0
+TelnetCommand,Cyclomatic,3,3,0
+TelnetCommand,Cohesion,0,0,0
+TelnetInputStream,Coupled,12,12,0
+TelnetInputStream,Derived,0,0,0
+TelnetInputStream,Public Methods,0,0,0
+TelnetInputStream,Cyclomatic,80,80,0
+TelnetInputStream,Cohesion,71,72,1
+TelnetOption,Coupled,2,2,0
+TelnetOption,Derived,0,0,0
+TelnetOption,Public Methods,2,2,0
+TelnetOption,Cyclomatic,4,4,0
+TelnetOption,Cohesion,0,0,0
+TelnetOptionHandler,Coupled,0,0,0
+TelnetOptionHandler,Derived,5,5,0
+TelnetOptionHandler,Public Methods,0,0,0
+TelnetOptionHandler,Cyclomatic,14,14,0
+TelnetOptionHandler,Cohesion,82,82,0
+TelnetOptionHandlerTestAbstract,Coupled,2,2,0
+TelnetOptionHandlerTestAbstract,Derived,5,5,0
+TelnetOptionHandlerTestAbstract,Public Methods,0,0,0
+TelnetOptionHandlerTestAbstract,Cyclomatic,3,3,0
+TelnetOptionHandlerTestAbstract,Cohesion,0,0,0
+TelnetOptionTest,Coupled,1,1,0
+TelnetOptionTest,Derived,0,0,0
+TelnetOptionTest,Public Methods,0,0,0
+TelnetOptionTest,Cyclomatic,2,2,0
+TelnetOptionTest,Cohesion,0,0,0
+TelnetOutputStream,Coupled,6,6,0
+TelnetOutputStream,Derived,0,0,0
+TelnetOutputStream,Public Methods,0,0,0
+TelnetOutputStream,Cyclomatic,15,15,0
+TelnetOutputStream,Cohesion,61,61,0
+TelnetTestResponder,Coupled,5,5,0
+TelnetTestResponder,Derived,0,0,0
+TelnetTestResponder,Public Methods,0,0,0
+TelnetTestResponder,Cyclomatic,7,7,0
+TelnetTestResponder,Cohesion,0,0,0
+TelnetTestSimpleServer,Coupled,7,7,0
+TelnetTestSimpleServer,Derived,0,0,0
+TelnetTestSimpleServer,Public Methods,0,0,0
+TelnetTestSimpleServer,Cyclomatic,16,16,0
+TelnetTestSimpleServer,Cohesion,50,50,0
+TerminalTypeOptionHandler,Coupled,3,3,0
+TerminalTypeOptionHandler,Derived,0,0,0
+TerminalTypeOptionHandler,Public Methods,0,0,0
+TerminalTypeOptionHandler,Cyclomatic,8,8,0
+TerminalTypeOptionHandler,Cohesion,40,40,0
+TerminalTypeOptionHandlerTest,Coupled,4,4,0
+TerminalTypeOptionHandlerTest,Derived,0,0,0
+TerminalTypeOptionHandlerTest,Public Methods,0,0,0
+TerminalTypeOptionHandlerTest,Cyclomatic,8,8,0
+TerminalTypeOptionHandlerTest,Cohesion,0,0,0
+Test,Coupled,,,N/A
+Test,Derived,,,N/A
+Test,Public Methods,,,N/A
+Test,Cyclomatic,,,N/A
+Test,Cohesion,,,N/A
+TestCase,Coupled,,,N/A
+TestCase,Derived,,,N/A
+TestCase,Public Methods,,,N/A
+TestCase,Cyclomatic,,,N/A
+TestCase,Cohesion,,,N/A
+TestConnectTimeout,Coupled,6,6,0
+TestConnectTimeout,Derived,0,0,0
+TestConnectTimeout,Public Methods,0,0,0
+TestConnectTimeout,Cyclomatic,3,3,0
+TestConnectTimeout,Cohesion,0,0,0
+TestConnection,Coupled,3,3,0
+TestConnection,Derived,0,0,0
+TestConnection,Public Methods,0,0,0
+TestConnection,Cyclomatic,2,2,0
+TestConnection,Cohesion,0,0,0
+TestSetupParameters,Coupled,1,1,0
+TestSetupParameters,Derived,0,0,0
+TestSetupParameters,Public Methods,0,0,0
+TestSetupParameters,Cyclomatic,1,1,0
+TestSetupParameters,Cohesion,0,0,0
+TestSuite,Coupled,,,N/A
+TestSuite,Derived,,,N/A
+TestSuite,Public Methods,,,N/A
+TestSuite,Cyclomatic,,,N/A
+TestSuite,Cohesion,,,N/A
+Thread,Coupled,,,N/A
+Thread,Derived,,,N/A
+Thread,Public Methods,,,N/A
+Thread,Cyclomatic,,,N/A
+Thread,Cohesion,,,N/A
+ThreadContainer,Coupled,2,2,0
+ThreadContainer,Derived,0,0,0
+ThreadContainer,Public Methods,0,0,0
+ThreadContainer,Cyclomatic,16,16,0
+ThreadContainer,Cohesion,42,42,0
+Threader,Coupled,9,9,0
+Threader,Derived,0,0,0
+Threader,Public Methods,0,0,0
+Threader,Cyclomatic,56,56,0
+Threader,Cohesion,71,71,0
+Throwable,Coupled,,,N/A
+Throwable,Derived,,,N/A
+Throwable,Public Methods,,,N/A
+Throwable,Cyclomatic,,,N/A
+Throwable,Cohesion,,,N/A
+TimeClient,Coupled,7,7,0
+TimeClient,Derived,0,0,0
+TimeClient,Public Methods,3,3,0
+TimeClient,Cyclomatic,7,7,0
+TimeClient,Cohesion,0,0,0
+TimeInfo,Coupled,7,7,0
+TimeInfo,Derived,0,0,0
+TimeInfo,Public Methods,0,0,0
+TimeInfo,Cyclomatic,27,27,0
+TimeInfo,Cohesion,77,77,0
+TimeStamp,Coupled,9,9,0
+TimeStamp,Derived,0,0,0
+TimeStamp,Public Methods,8,8,0
+TimeStamp,Cyclomatic,35,35,0
+TimeStamp,Cohesion,79,79,0
+TimeStampTest,Coupled,4,4,0
+TimeStampTest,Derived,0,0,0
+TimeStampTest,Public Methods,0,0,0
+TimeStampTest,Cyclomatic,3,3,0
+TimeStampTest,Cohesion,0,0,0
+TimeTCPClient,Coupled,3,3,0
+TimeTCPClient,Derived,0,0,0
+TimeTCPClient,Public Methods,0,0,0
+TimeTCPClient,Cyclomatic,3,3,0
+TimeTCPClient,Cohesion,0,0,0
+TimeTCPClientTest,Coupled,8,8,0
+TimeTCPClientTest,Derived,0,0,0
+TimeTCPClientTest,Public Methods,0,0,0
+TimeTCPClientTest,Cyclomatic,8,8,0
+TimeTCPClientTest,Cohesion,50,50,0
+TimeTestSimpleServer,Coupled,5,5,0
+TimeTestSimpleServer,Derived,0,0,0
+TimeTestSimpleServer,Public Methods,1,1,0
+TimeTestSimpleServer,Cyclomatic,20,20,0
+TimeTestSimpleServer,Cohesion,52,52,0
+TimeUDPClient,Coupled,4,4,0
+TimeUDPClient,Derived,0,0,0
+TimeUDPClient,Public Methods,0,0,0
+TimeUDPClient,Cyclomatic,4,4,0
+TimeUDPClient,Cohesion,75,75,0
+TimeZone,Coupled,,,N/A
+TimeZone,Derived,,,N/A
+TimeZone,Public Methods,,,N/A
+TimeZone,Cyclomatic,,,N/A
+TimeZone,Cohesion,,,N/A
+ToNetASCIIInputStream,Coupled,3,3,0
+ToNetASCIIInputStream,Derived,0,0,0
+ToNetASCIIInputStream,Public Methods,0,0,0
+ToNetASCIIInputStream,Cyclomatic,16,16,0
+ToNetASCIIInputStream,Cohesion,50,50,0
+ToNetASCIIInputStreamTest,Coupled,N/A,8,N/A
+ToNetASCIIInputStreamTest,Derived,N/A,0,N/A
+ToNetASCIIInputStreamTest,Public Methods,N/A,0,N/A
+ToNetASCIIInputStreamTest,Cyclomatic,N/A,8,N/A
+ToNetASCIIInputStreamTest,Cohesion,N/A,0,N/A
+ToNetASCIIOutputStream,Coupled,3,3,0
+ToNetASCIIOutputStream,Derived,0,0,0
+ToNetASCIIOutputStream,Public Methods,0,0,0
+ToNetASCIIOutputStream,Cyclomatic,8,8,0
+ToNetASCIIOutputStream,Cohesion,50,50,0
+TreeMap,Coupled,,,N/A
+TreeMap,Derived,,,N/A
+TreeMap,Public Methods,,,N/A
+TreeMap,Cyclomatic,,,N/A
+TreeMap,Cohesion,,,N/A
+TreeSet,Coupled,,,N/A
+TreeSet,Derived,,,N/A
+TreeSet,Public Methods,,,N/A
+TreeSet,Cyclomatic,,,N/A
+TreeSet,Cohesion,,,N/A
+TrustManager,Coupled,4,4,0
+TrustManager,Derived,0,0,0
+TrustManager,Public Methods,0,0,0
+TrustManager,Cyclomatic,6,6,0
+TrustManager,Cohesion,50,50,0
+TrustManagerFactory,Coupled,,,N/A
+TrustManagerFactory,Derived,,,N/A
+TrustManagerFactory,Public Methods,,,N/A
+TrustManagerFactory,Cyclomatic,,,N/A
+TrustManagerFactory,Cohesion,,,N/A
+TrustManagerUtils,Coupled,7,7,0
+TrustManagerUtils,Derived,0,0,0
+TrustManagerUtils,Public Methods,3,3,0
+TrustManagerUtils,Cyclomatic,3,3,0
+TrustManagerUtils,Cohesion,0,0,0
+UnixFTPEntryParser,Coupled,8,8,0
+UnixFTPEntryParser,Derived,0,0,0
+UnixFTPEntryParser,Public Methods,0,0,0
+UnixFTPEntryParser,Cyclomatic,24,24,0
+UnixFTPEntryParser,Cohesion,0,0,0
+UnixFTPEntryParserTest,Coupled,7,7,0
+UnixFTPEntryParserTest,Derived,0,0,0
+UnixFTPEntryParserTest,Public Methods,0,0,0
+UnixFTPEntryParserTest,Cyclomatic,30,30,0
+UnixFTPEntryParserTest,Cohesion,0,0,0
+UnknownHostException,Coupled,,,N/A
+UnknownHostException,Derived,,,N/A
+UnknownHostException,Public Methods,,,N/A
+UnknownHostException,Cyclomatic,,,N/A
+UnknownHostException,Cohesion,,,N/A
+UnsupportedEncodingException,Coupled,,,N/A
+UnsupportedEncodingException,Derived,,,N/A
+UnsupportedEncodingException,Public Methods,,,N/A
+UnsupportedEncodingException,Cyclomatic,,,N/A
+UnsupportedEncodingException,Cohesion,,,N/A
+UnsupportedOperationException,Coupled,,,N/A
+UnsupportedOperationException,Derived,,,N/A
+UnsupportedOperationException,Public Methods,,,N/A
+UnsupportedOperationException,Cyclomatic,,,N/A
+UnsupportedOperationException,Cohesion,,,N/A
+Util,Coupled,10,10,0
+Util,Derived,0,0,0
+Util,Public Methods,9,9,0
+Util,Cyclomatic,28,30,2
+Util,Cohesion,0,0,0
+VMSFTPEntryParser,Coupled,12,12,0
+VMSFTPEntryParser,Derived,2,2,0
+VMSFTPEntryParser,Public Methods,0,0,0
+VMSFTPEntryParser,Cyclomatic,18,18,0
+VMSFTPEntryParser,Cohesion,0,0,0
+VMSFTPEntryParserTest,Coupled,11,11,0
+VMSFTPEntryParserTest,Derived,0,0,0
+VMSFTPEntryParserTest,Public Methods,0,0,0
+VMSFTPEntryParserTest,Cyclomatic,16,16,0
+VMSFTPEntryParserTest,Cohesion,0,0,0
+VMSVersioningFTPEntryParser,Coupled,12,12,0
+VMSVersioningFTPEntryParser,Derived,0,0,0
+VMSVersioningFTPEntryParser,Public Methods,0,0,0
+VMSVersioningFTPEntryParser,Cyclomatic,13,13,0
+VMSVersioningFTPEntryParser,Cohesion,50,50,0
+Vector,Coupled,,,N/A
+Vector,Derived,,,N/A
+Vector,Public Methods,,,N/A
+Vector,Cyclomatic,,,N/A
+Vector,Cohesion,,,N/A
+WeatherTelnet,Coupled,4,4,0
+WeatherTelnet,Derived,0,0,0
+WeatherTelnet,Public Methods,1,1,0
+WeatherTelnet,Cyclomatic,3,3,0
+WeatherTelnet,Cohesion,0,0,0
+WhoisClient,Coupled,3,3,0
+WhoisClient,Derived,0,0,0
+WhoisClient,Public Methods,0,0,0
+WhoisClient,Cyclomatic,3,3,0
+WhoisClient,Cohesion,0,0,0
+WindowSizeOptionHandler,Coupled,2,2,0
+WindowSizeOptionHandler,Derived,0,0,0
+WindowSizeOptionHandler,Public Methods,0,0,0
+WindowSizeOptionHandler,Cyclomatic,11,11,0
+WindowSizeOptionHandler,Cohesion,40,40,0
+WindowSizeOptionHandlerTest,Coupled,4,4,0
+WindowSizeOptionHandlerTest,Derived,0,0,0
+WindowSizeOptionHandlerTest,Public Methods,0,0,0
+WindowSizeOptionHandlerTest,Cyclomatic,7,7,0
+WindowSizeOptionHandlerTest,Cohesion,0,0,0
+Writer,Coupled,,,N/A
+Writer,Derived,,,N/A
+Writer,Public Methods,,,N/A
+Writer,Cyclomatic,,,N/A
+Writer,Cohesion,,,N/A
+X509Certificate,Coupled,,,N/A
+X509Certificate,Derived,,,N/A
+X509Certificate,Public Methods,,,N/A
+X509Certificate,Cyclomatic,,,N/A
+X509Certificate,Cohesion,,,N/A
+X509ExtendedKeyManager,Coupled,,,N/A
+X509ExtendedKeyManager,Derived,,,N/A
+X509ExtendedKeyManager,Public Methods,,,N/A
+X509ExtendedKeyManager,Cyclomatic,,,N/A
+X509ExtendedKeyManager,Cohesion,,,N/A
+X509KeyManager,Coupled,4,4,0
+X509KeyManager,Derived,0,0,0
+X509KeyManager,Public Methods,0,0,0
+X509KeyManager,Cyclomatic,7,7,0
+X509KeyManager,Cohesion,29,29,0
+X509TrustManager,Coupled,,,N/A
+X509TrustManager,Derived,,,N/A
+X509TrustManager,Public Methods,,,N/A
+X509TrustManager,Cyclomatic,,,N/A
+X509TrustManager,Cohesion,,,N/A
+chargen,Coupled,11,11,0
+chargen,Derived,0,0,0
+chargen,Public Methods,3,3,0
+chargen,Cyclomatic,12,12,0
+chargen,Cohesion,0,0,0
+daytime,Coupled,7,7,0
+daytime,Derived,0,0,0
+daytime,Public Methods,3,3,0
+daytime,Cyclomatic,7,7,0
+daytime,Cohesion,0,0,0
+echo,Coupled,14,14,0
+echo,Derived,0,0,0
+echo,Public Methods,3,3,0
+echo,Cyclomatic,12,12,0
+echo,Cohesion,0,0,0
+finger,Coupled,6,6,0
+finger,Derived,0,0,0
+finger,Public Methods,1,1,0
+finger,Cyclomatic,12,12,0
+finger,Cohesion,0,0,0
+fwhois,Coupled,6,6,0
+fwhois,Derived,0,0,0
+fwhois,Public Methods,1,1,0
+fwhois,Cyclomatic,5,5,0
+fwhois,Cohesion,0,0,0
+rdate,Coupled,7,7,0
+rdate,Derived,0,0,0
+rdate,Public Methods,3,3,0
+rdate,Cyclomatic,7,7,0
+rdate,Cohesion,0,0,0
+rexec,Coupled,5,5,0
+rexec,Derived,0,0,0
+rexec,Public Methods,1,1,0
+rexec,Cyclomatic,6,6,0
+rexec,Cohesion,0,0,0
+rlogin,Coupled,6,6,0
+rlogin,Derived,0,0,0
+rlogin,Public Methods,1,1,0
+rlogin,Cyclomatic,6,6,0
+rlogin,Cohesion,0,0,0
+rshell,Coupled,6,6,0
+rshell,Derived,0,0,0
+rshell,Public Methods,1,1,0
+rshell,Cyclomatic,6,6,0
+rshell,Cohesion,0,0,0
