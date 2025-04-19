@@ -1,54 +1,50 @@
-import sys
 import os
-import csv
+import sys
 import understand as und
-from dotenv import load_dotenv
 
-class VersionComparator:
+class FileComparator:
     def __init__(self):
-        load_dotenv()
-        self.und_path = os.getenv("UNDERSTAND_PATH")
         self.version_32_path = os.getenv("VERSION_32")
         self.version_33_path = os.getenv("VERSION_33")
 
-        if self.und_path:
-            sys.path.append(self.und_path)
-
-    def extract_metrics(self, project_path):
+    def get_project_files(self, project_path):
         db = und.open(project_path)
-        metrics = {}
+        files = set()
 
-        for cls in db.ents("Class"):
-            metrics[cls.name()] = {
-                "Coupled": cls.metric("CountClassCoupled"),
-                "Derived": cls.metric("CountClassDerived"),
-                "Public Methods": cls.metric("CountDeclClassMethod"),
-                "Cyclomatic": cls.metric("SumCyclomatic"),
-                "Cohesion": cls.metric("PercentLackOfCohesion")
-            }
+        for ent in db.ents("File"):
+            path = ent.name()
+            if path.endswith(".java"):
+                filename = os.path.basename(path)
+                files.add(filename)
 
-        return metrics
+        return files
 
-    def compare_metrics(self):
-        m32 = self.extract_metrics(self.version_32_path)
-        m33 = self.extract_metrics(self.version_33_path)
+    def compare_files(self):
+        files_32 = self.get_project_files(self.version_32_path)
+        files_33 = self.get_project_files(self.version_33_path)
 
-        all_classes = sorted(set(m32.keys()) | set(m33.keys()))
+        # ✅ Print total counts
+        print(f"📦 Total project-defined .java files in version 3.2: {len(files_32)}")
+        print(f"📦 Total project-defined .java files in version 3.3: {len(files_33)}")
 
-        with open("compare_3.2_vs_3.3.csv", "w", newline="") as file:
-            writer = csv.writer(file)
-            writer.writerow(["Class", "Metric", "3.2", "3.3", "Delta"])
+        # ✅ Compare differences
+        only_in_32 = sorted(files_32 - files_33)
+        only_in_33 = sorted(files_33 - files_32)
 
-            for cls in all_classes:
-                for metric in ["Coupled", "Derived", "Public Methods", "Cyclomatic", "Cohesion"]:
-                    v32 = m32.get(cls, {}).get(metric, "N/A")
-                    v33 = m33.get(cls, {}).get(metric, "N/A")
-                    delta = (v33 - v32) if isinstance(v32, (int, float)) and isinstance(v33, (int, float)) else "N/A"
-                    writer.writerow([cls, metric, v32, v33, delta])
+        if only_in_32:
+            print("\n📁 Files only in version 3.2:")
+            for file in only_in_32:
+                print(f" - {file}")
 
-        print("✅ Comparison complete. Output saved to compare_3.2_vs_3.3.csv")
+        if only_in_33:
+            print("\n📁 Files only in version 3.3:")
+            for file in only_in_33:
+                print(f" - {file}")
 
-# Run the comparison
+        if not only_in_32 and not only_in_33:
+            print("\n✅ No file differences — all .java files match between versions.")
+
+# Run it
 if __name__ == "__main__":
-    comparator = VersionComparator()
-    comparator.compare_metrics()
+    comparator = FileComparator()
+    comparator.compare_files()
