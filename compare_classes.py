@@ -2,20 +2,19 @@ import os
 import sys
 import understand as und
 from dotenv import load_dotenv
-import pandas as pd
 
-# Load .env if available
+# Load environment
 try:
     load_dotenv()
     print("✅ dotenv module loaded and .env file processed")
 except Exception as e:
     print("❌ dotenv NOT working:", e)
 
-# Set paths
+# Set version paths
 VERSION_32_PATH = os.getenv("VERSION_32", "C:/Users/Owner/Downloads/commons-net-3.2-src/commons-net-3.2-src/commons-net-3.2-src.und")
 VERSION_33_PATH = os.getenv("VERSION_33", "C:/Users/Owner/Downloads/commons-net-3.3-src/commons-net-3.3-src/commons-net-3.3-src.und")
 
-# Define metrics
+# Metrics of interest
 METRICS = [
     "CountClassDerived",
     "CountClassCoupled",
@@ -73,20 +72,6 @@ class FileComparator:
                 print(f"📍 {cls}")
                 for diff in diffs:
                     print("   -", diff)
-
-        # General metric comparison
-        print("\n📈 General Metric Comparison Across Versions:")
-        df_summary = pd.DataFrame(columns=["Metric", "Ver32", "Ver33"])
-
-        for metric in METRICS:
-            total_32 = sum(cls_metrics[metric] for cls_metrics in data_32.values())
-            total_33 = sum(cls_metrics[metric] for cls_metrics in data_33.values())
-            df_summary = pd.concat([df_summary, pd.DataFrame([{
-                "Metric": metric,
-                "Ver32": total_32,
-                "Ver33": total_33
-            }])], ignore_index=True)
-            print(f"{metric}: Ver32 = {total_32}, Ver33 = {total_33}")
 
 # Run it
 if __name__ == "__main__":
