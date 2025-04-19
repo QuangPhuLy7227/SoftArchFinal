@@ -1,1 +1,6 @@
 python-dotenv
+pandas
+matplotlib
+dateutil
+numpy
+pytz

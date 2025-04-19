@@ -1,5 +1,6 @@
 import os
 import sys
+sys.path.append("/Applications/Understand.app/Contents/MacOS/Python")
 import understand as und
 from dotenv import load_dotenv
 import pandas as pd

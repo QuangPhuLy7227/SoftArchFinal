@@ -1,2 +1,12 @@
+# Phu
 C:\Users\Owner\AppData\Local\Programs\Python\Python310\python.exe -m venv .venv310
 & "C:\Program Files\SciTools\bin\pc-win64\upython.exe" compare_versions.py
+
+
+# Thanh
+. .venv/bin/activate
+/Applications/Understand.app/Contents/MacOS/upython compare_classes.py
+pip install -r requirements.txt
+
+import sys
+sys.path.append("/Applications/Understand.app/Contents/MacOS/Python")

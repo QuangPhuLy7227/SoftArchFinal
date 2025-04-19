@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../Downloads/e3-web-frontend"
+		},
+		{
+			"path": "../e3-web-backend"
+		},
+		{
+			"path": "../e3-ingestion-service"
+		},
+		{
+			"path": "../e3-processing-worker"
+		},
+		{
+			"path": "../e3-iot-log-alert-infra"
+		},
+		{
+			"path": "../FTPArchitectureAnalysis"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
