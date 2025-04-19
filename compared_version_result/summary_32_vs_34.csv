@@ -1,0 +1,11 @@
+Metric,Ver1,Ver2
+Classes Added,41,
+Classes Deleted,2,
+Changes in CountClassDerived,97,101
+Changes in CountClassCoupled,1663,1939
+Changes in CountDeclClassVariable,710,789
+Changes in SumCyclomatic,3844,4305
+Changes in CountDeclClass,0,0
+Changes in CountDeclInstanceVariablePublic,0,0
+Changes in CountDeclClassMethod,153,180
+Changes in AvgCyclomatic,617,693

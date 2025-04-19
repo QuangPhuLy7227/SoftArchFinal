@@ -1,32 +1,40 @@
+import os
+import subprocess
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
 
-# --- Prompt user for version labels ---
-v1 = input("Enter first version label (e.g. 32 will be for v3.2): ").strip()
-v2 = input("Enter second version label (e.g. 33 will be for v3.3): ").strip()
+# --- Prompt user for version labels once ---
+v1 = input("Enter first version label (e.g. v3.2): ").strip()
+v2 = input("Enter second version label (e.g. v3.3): ").strip()
 
-folder = f"{v1} vs {v2}"
+# --- Define summary file path ---
+summary_dir = "compared_version_result"
 summary_file = f"summary_{v1}_vs_{v2}.csv"
-csv_path = os.path.join(folder, summary_file)
+summary_path = os.path.join(summary_dir, summary_file)
 
-# --- Validate file exists ---
-if not os.path.exists(csv_path):
-    print(f"❌ Summary CSV not found: {csv_path}")
+# --- Run extract_and_compare_versions.py if summary not found ---
+if not os.path.exists(summary_path):
+    print("🔍 Summary not found, running extraction...")
+    subprocess.run([
+        "/Applications/Understand.app/Contents/MacOS/upython",
+        "extract_and_compare_versions.py", v1, v2
+    ], check=True)
+
+# --- Recheck file after subprocess ---
+if not os.path.exists(summary_path):
+    print(f"❌ Could not generate summary: {summary_path}")
     exit(1)
 
 # --- Load the summary CSV ---
-df = pd.read_csv(csv_path)
+df = pd.read_csv(summary_path)
 
-# --- Filter for actual metric rows ---
+# --- Filter for metrics only ---
 metrics_only = df[df["Metric"].str.startswith("Changes in ")].copy()
 metrics_only["Metric"] = metrics_only["Metric"].str.replace("Changes in ", "")
-
-# --- Parse numeric values ---
 metrics_only["Ver1"] = pd.to_numeric(metrics_only["Ver1"], errors="coerce")
 metrics_only["Ver2"] = pd.to_numeric(metrics_only["Ver2"], errors="coerce")
 
-# --- Plot ---
+# --- Plot setup ---
 plt.figure(figsize=(10, 6))
 bar_width = 0.35
 x = range(len(metrics_only))
@@ -40,14 +48,14 @@ plt.ylabel("Total Metric Value")
 plt.legend()
 plt.tight_layout()
 
-# --- Annotate bars with values ---
+# --- Add value labels on bars ---
 def add_labels(bars):
     for bar in bars:
         height = bar.get_height()
         plt.annotate(
             f'{int(height)}',
             xy=(bar.get_x() + bar.get_width() / 2, height),
-            xytext=(0, 3),  # 3 points vertical offset
+            xytext=(0, 3),
             textcoords="offset points",
             ha='center', va='bottom', fontsize=8
         )
@@ -55,4 +63,5 @@ def add_labels(bars):
 add_labels(bars1)
 add_labels(bars2)
 
+# --- Show plot ---
 plt.show()
