@@ -1,6 +1,6 @@
 import argparse
 import understand
-from detectors import adapter, observer, factory, singleton, iterator, proxy, strategy
+from detectors import adapter, observer, factory, singleton, iterator, proxy, strategy, template
 from collections import defaultdict
 
 def main():
@@ -36,15 +36,15 @@ def main():
             print(f"  Fields:              {e['fields']}\n")
             
     # Template Method Detection
-    # template_matches = template.find(db).get("template", [])
-    # print("\n=== Template Method Pattern ===")
-    # if not template_matches:
-    #     print("No Template Method patterns found.")
-    # else:
-    #     for e in template_matches:
-    #         print(f"TemplateClass:        {e['template_class']}")
-    #         print(f"  PrimitiveOperations: {e['primitive_operations']}")
-    #         print(f"  TemplateMethods:     {e['template_methods']}\n")
+    template_matches = template.find(db).get("template", [])
+    print("\n=== Template Method Pattern ===")
+    if not template_matches:
+        print("No Template Method patterns found.")
+    else:
+        for e in template_matches:
+            print(f"TemplateClass:        {e['template_class']}")
+            print(f"  PrimitiveOperations: {e['primitive_operations']}")
+            print(f"  TemplateMethods:     {e['template_methods']}\n")
             
     # Strategy Detection
     strategy_matches = strategy.find(db).get("strategy", [])
