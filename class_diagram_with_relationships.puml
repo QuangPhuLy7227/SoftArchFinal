@@ -1,0 +1,79 @@
+@startuml
+class DefaultFTPFileEntryParserFactory {
+    - JAVA_IDENTIFIER : String
+    - JAVA_QUALIFIED_NAME : String
+    - JAVA_QUALIFIED_NAME_PATTERN : Pattern
+    + createFileEntryParser(key: String) : FTPFileEntryParser
+    - createFileEntryParser(key: String, config: FTPClientConfig, e: ClassCastException, e: Exception, e: ExceptionInInitializerError, e: ClassNotFoundException) : FTPFileEntryParser
+    + createFileEntryParser(config: FTPClientConfig) : FTPFileEntryParser
+    + createUnixFTPEntryParser() : FTPFileEntryParser
+    + createVMSVersioningFTPEntryParser() : FTPFileEntryParser
+    + createNetwareFTPEntryParser() : FTPFileEntryParser
+    + createNTFTPEntryParser() : FTPFileEntryParser
+    - createNTFTPEntryParser(config: FTPClientConfig) : FTPFileEntryParser
+    + createOS2FTPEntryParser() : FTPFileEntryParser
+    + createOS400FTPEntryParser() : FTPFileEntryParser
+    - createOS400FTPEntryParser(config: FTPClientConfig) : FTPFileEntryParser
+    + createMVSEntryParser() : FTPFileEntryParser
+}
+class FTPFileEntryParser {
+    + parseFTPEntry(listEntry: String) : FTPFile
+    + readNextEntry(reader: BufferedReader) : String
+    + preParse(original: List<String>) : List<String>
+}
+class UnixFTPEntryParser {
+    + DEFAULT_DATE_FORMAT : String
+    + DEFAULT_RECENT_DATE_FORMAT : String
+    + NUMERIC_DATE_FORMAT : String
+    + NUMERIC_DATE_CONFIG : FTPClientConfig
+    - REGEX : String
+    + UnixFTPEntryParser() : None
+    + UnixFTPEntryParser(config: FTPClientConfig) : None
+    + preParse(original: List<String>) : List<String>
+    + parseFTPEntry(entry: String, e: ParseException, e: NumberFormatException, e: NumberFormatException) : FTPFile
+    # getDefaultConfiguration() : FTPClientConfig
+}
+class VMSVersioningFTPEntryParser {
+    - _preparse_pattern_ : Pattern
+    - PRE_PARSE_REGEX : String
+    + VMSVersioningFTPEntryParser() : None
+    + VMSVersioningFTPEntryParser(config: FTPClientConfig, pse: PatternSyntaxException) : None
+    + preParse(original: List<String>) : List<String>
+    # isVersioning() : boolean
+}
+class OS2FTPEntryParser {
+    - DEFAULT_DATE_FORMAT : String
+    - REGEX : String
+    + OS2FTPEntryParser() : None
+    + OS2FTPEntryParser(config: FTPClientConfig) : None
+    + parseFTPEntry(entry: String, e: ParseException) : FTPFile
+    # getDefaultConfiguration() : FTPClientConfig
+}
+class VMSFTPEntryParser {
+    - DEFAULT_DATE_FORMAT : String
+    - REGEX : String
+    + VMSFTPEntryParser() : None
+    + VMSFTPEntryParser(config: FTPClientConfig) : None
+    + parseFTPEntry(entry: String, e: ParseException) : FTPFile
+    + readNextEntry(reader: BufferedReader) : String
+    # isVersioning() : boolean
+    # getDefaultConfiguration() : FTPClientConfig
+    + parseFileList(listStream: java.io.InputStream) : FTPFile[]
+}
+class DefaultFTPFileEntryParserFactoryTest {
+    + testDefaultParserFactory(pie: ParserInitializationException, pie: ParserInitializationException, pie: ParserInitializationException, pie: ParserInitializationException, pie: ParserInitializationException) : void
+    - checkParserClass(fact: FTPFileEntryParserFactory, key: String, expected: Class<?>) : void
+    + testDefaultParserFactoryConfig(npe: NullPointerException) : void
+}
+DefaultFTPFileEntryParserFactory --> FTPFileEntryParser : couples
+DefaultFTPFileEntryParserFactory --> UnixFTPEntryParser : couples
+DefaultFTPFileEntryParserFactory --> VMSVersioningFTPEntryParser : couples
+DefaultFTPFileEntryParserFactory --> OS2FTPEntryParser : couples
+VMSVersioningFTPEntryParser --> VMSFTPEntryParser : couples
+VMSFTPEntryParser --|> VMSVersioningFTPEntryParser : inherits
+DefaultFTPFileEntryParserFactoryTest --> DefaultFTPFileEntryParserFactory : couples
+DefaultFTPFileEntryParserFactoryTest --> FTPFileEntryParser : couples
+DefaultFTPFileEntryParserFactoryTest --> UnixFTPEntryParser : couples
+DefaultFTPFileEntryParserFactoryTest --> OS2FTPEntryParser : couples
+DefaultFTPFileEntryParserFactoryTest --> VMSFTPEntryParser : couples
+@enduml
