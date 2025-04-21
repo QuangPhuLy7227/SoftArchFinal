@@ -3,7 +3,7 @@ import sys
 import csv
 from pathlib import Path
 
-# sys.path.append("/Applications/Understand.app/Contents/MacOS")
+sys.path.append("/Applications/Understand.app/Contents/MacOS")
 import understand as und
 
 # --- Load .env ---
@@ -88,7 +88,7 @@ def summarize_totals(data1, data2, added, deleted, output_path):
         writer.writerows(summary)
 
 # --- Main Execution ---
-if __name__ == "__main__":
+if _name_ == "_main_":
     load_dotenv()
 
     # Ask user
@@ -98,22 +98,25 @@ if __name__ == "__main__":
     k1, path1 = get_version_path(v1_label)
     k2, path2 = get_version_path(v2_label)
 
-    folder_name = f"{v1_label} vs {v2_label}"
-    os.makedirs(folder_name, exist_ok=True)
+    # Create full path under version_metrics folder
+    output_dir = os.path.join("version_metrics")
+    os.makedirs(output_dir, exist_ok=True)
 
     print(f"\n📦 Comparing: {v1_label} vs {v2_label}")
-    print(f"📂 Exporting to: {folder_name}/")
+    print(f"📂 Exporting to: {output_dir}/")
 
     data1 = MetricExporter(path1).extract()
     data2 = MetricExporter(path2).extract()
 
-    export_metrics_csv(data1, os.path.join(folder_name, f"metrics_{v1_label}.csv"))
-    export_metrics_csv(data2, os.path.join(folder_name, f"metrics_{v2_label}.csv"))
+    export_metrics_csv(data1, os.path.join(output_dir, f"metrics_{v1_label}.csv"))
+    export_metrics_csv(data2, os.path.join(output_dir, f"metrics_{v2_label}.csv"))
 
     classes1 = set(data1)
     classes2 = set(data2)
     added = classes2 - classes1
     deleted = classes1 - classes2
 
-    summary_path = os.path.join(folder_name, f"summary_{v1_label}_vs_{v2_label}.csv")
+    output_summmary_dir = os.path.join("compared_version_result")
+
+    summary_path = os.path.join(output_summmary_dir, f"summary_{v1_label}_vs_{v2_label}.csv")
     summarize_totals(data1, data2, added, deleted, summary_path)
