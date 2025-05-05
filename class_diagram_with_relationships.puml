@@ -1,79 +1,521 @@
 @startuml
-class DefaultFTPFileEntryParserFactory {
-    - JAVA_IDENTIFIER : String
-    - JAVA_QUALIFIED_NAME : String
-    - JAVA_QUALIFIED_NAME_PATTERN : Pattern
-    + createFileEntryParser(key: String) : FTPFileEntryParser
-    - createFileEntryParser(key: String, config: FTPClientConfig, e: ClassCastException, e: Exception, e: ExceptionInInitializerError, e: ClassNotFoundException) : FTPFileEntryParser
-    + createFileEntryParser(config: FTPClientConfig) : FTPFileEntryParser
-    + createUnixFTPEntryParser() : FTPFileEntryParser
-    + createVMSVersioningFTPEntryParser() : FTPFileEntryParser
-    + createNetwareFTPEntryParser() : FTPFileEntryParser
-    + createNTFTPEntryParser() : FTPFileEntryParser
-    - createNTFTPEntryParser(config: FTPClientConfig) : FTPFileEntryParser
-    + createOS2FTPEntryParser() : FTPFileEntryParser
-    + createOS400FTPEntryParser() : FTPFileEntryParser
-    - createOS400FTPEntryParser(config: FTPClientConfig) : FTPFileEntryParser
-    + createMVSEntryParser() : FTPFileEntryParser
+class FTP {
+    + DEFAULT_DATA_PORT : int
+    + DEFAULT_PORT : int
+    + ASCII_FILE_TYPE : int
+    + EBCDIC_FILE_TYPE : int
+    + BINARY_FILE_TYPE : int
+    + LOCAL_FILE_TYPE : int
+    + NON_PRINT_TEXT_FORMAT : int
+    + TELNET_TEXT_FORMAT : int
+    + CARRIAGE_CONTROL_TEXT_FORMAT : int
+    + FILE_STRUCTURE : int
+    + RECORD_STRUCTURE : int
+    + PAGE_STRUCTURE : int
+    + STREAM_TRANSFER_MODE : int
+    + BLOCK_TRANSFER_MODE : int
+    + COMPRESSED_TRANSFER_MODE : int
+    + DEFAULT_CONTROL_ENCODING : String
+    + REPLY_CODE_LEN : int
+    - __modes : String
+    - _replyCode : int
+    - _replyLines : ArrayList<String>
+    - _newReplyString : boolean
+    - _replyString : String
+    - _controlEncoding : String
+    - _commandSupport_ : ProtocolCommandSupport
+    # strictMultilineParsing : boolean
+    - _controlInput_ : BufferedReader
+    - _controlOutput_ : BufferedWriter
+    + FTP() : None
+    - __strictCheck(line: String, code: String) : boolean
+    - __lenientCheck(line: String) : boolean
+    - __getReply() : void
+    # __getReplyNoReport() : void
+    - __getReply(reportReply: boolean, e: NumberFormatException) : void
+    # _connectAction_(e: SocketTimeoutException) : void
+    + setControlEncoding(encoding: String) : void
+    + getControlEncoding() : String
+    + disconnect() : void
+    + sendCommand(command: String, args: String) : int
+    - __buildMessage(command: String, args: String) : String
+    - __send(message: String, e: SocketException) : void
+    # __noop() : void
+    + sendCommand(command: int, args: String) : int
+    + sendCommand(command: String) : int
+    + sendCommand(command: int) : int
+    + getReplyCode() : int
+    + getReply() : int
+    + getReplyStrings() : String[]
+    + getReplyString() : String
+    + user(username: String) : int
+    + pass(password: String) : int
+    + acct(account: String) : int
+    + abor() : int
+    + cwd(directory: String) : int
+    + cdup() : int
+    + quit() : int
+    + rein() : int
+    + smnt(dir: String) : int
+    + port(host: InetAddress, port: int) : int
+    + eprt(host: InetAddress, port: int) : int
+    + pasv() : int
+    + epsv() : int
+    + type(fileType: int, formatOrByteSize: int) : int
+    + type(fileType: int) : int
+    + stru(structure: int) : int
+    + mode(mode: int) : int
+    + retr(pathname: String) : int
+    + stor(pathname: String) : int
+    + stou() : int
+    + stou(pathname: String) : int
+    + appe(pathname: String) : int
+    + allo(bytes: int) : int
+    + feat() : int
+    + allo(bytes: int, recordSize: int) : int
+    + rest(marker: String) : int
+    + mdtm(file: String) : int
+    + mfmt(pathname: String, timeval: String) : int
+    + rnfr(pathname: String) : int
+    + rnto(pathname: String) : int
+    + dele(pathname: String) : int
+    + rmd(pathname: String) : int
+    + mkd(pathname: String) : int
+    + pwd() : int
+    + list() : int
+    + list(pathname: String) : int
+    + mlsd() : int
+    + mlsd(path: String) : int
+    + mlst() : int
+    + mlst(path: String) : int
+    + nlst() : int
+    + nlst(pathname: String) : int
+    + site(parameters: String) : int
+    + syst() : int
+    + stat() : int
+    + stat(pathname: String) : int
+    + help() : int
+    + help(command: String) : int
+    + noop() : int
+    + isStrictMultilineParsing() : boolean
+    + setStrictMultilineParsing(strictMultilineParsing: boolean) : void
+    # getCommandSupport() : ProtocolCommandSupport
 }
-class FTPFileEntryParser {
-    + parseFTPEntry(listEntry: String) : FTPFile
-    + readNextEntry(reader: BufferedReader) : String
-    + preParse(original: List<String>) : List<String>
+class SocketClient {
+    + NETASCII_EOL : String
+    - __DEFAULT_SOCKET_FACTORY : SocketFactory
+    - __DEFAULT_SERVER_SOCKET_FACTORY : ServerSocketFactory
+    - __commandSupport : ProtocolCommandSupport
+    - _timeout_ : int
+    - _socket_ : Socket
+    - _defaultPort_ : int
+    - _input_ : InputStream
+    - _output_ : OutputStream
+    - _socketFactory_ : SocketFactory
+    - _serverSocketFactory_ : ServerSocketFactory
+    - DEFAULT_CONNECT_TIMEOUT : int
+    # connectTimeout : int
+    - receiveBufferSize : int
+    - sendBufferSize : int
+    - connProxy : Proxy
+    + SocketClient() : None
+    # _connectAction_() : void
+    + connect(host: InetAddress, port: int) : void
+    + connect(hostname: String, port: int) : void
+    + connect(host: InetAddress, port: int, localAddr: InetAddress, localPort: int) : void
+    + connect(hostname: String, port: int, localAddr: InetAddress, localPort: int) : void
+    + connect(host: InetAddress) : void
+    + connect(hostname: String) : void
+    + disconnect() : void
+    - closeQuietly(socket: Socket, e: IOException) : void
+    - closeQuietly(close: Closeable, e: IOException) : void
+    + isConnected() : boolean
+    + isAvailable(ioex: IOException) : boolean
+    + setDefaultPort(port: int) : void
+    + getDefaultPort() : int
+    + setDefaultTimeout(timeout: int) : void
+    + getDefaultTimeout() : int
+    + setSoTimeout(timeout: int) : void
+    + setSendBufferSize(size: int) : void
+    # getSendBufferSize() : int
+    + setReceiveBufferSize(size: int) : void
+    # getReceiveBufferSize() : int
+    + getSoTimeout() : int
+    + setTcpNoDelay(on: boolean) : void
+    + getTcpNoDelay() : boolean
+    + setKeepAlive(keepAlive: boolean) : void
+    + getKeepAlive() : boolean
+    + setSoLinger(on: boolean, val: int) : void
+    + getSoLinger() : int
+    + getLocalPort() : int
+    + getLocalAddress() : InetAddress
+    + getRemotePort() : int
+    + getRemoteAddress() : InetAddress
+    + verifyRemote(socket: Socket) : boolean
+    + setSocketFactory(factory: SocketFactory) : void
+    + setServerSocketFactory(factory: ServerSocketFactory) : void
+    + setConnectTimeout(connectTimeout: int) : void
+    + getConnectTimeout() : int
+    + getServerSocketFactory() : ServerSocketFactory
+    + addProtocolCommandListener(listener: ProtocolCommandListener) : void
+    + removeProtocolCommandListener(listener: ProtocolCommandListener) : void
+    # fireReplyReceived(replyCode: int, reply: String) : void
+    # fireCommandSent(command: String, message: String) : void
+    # createCommandSupport() : void
+    # getCommandSupport() : ProtocolCommandSupport
+    + setProxy(proxy: Proxy) : void
+    + getProxy() : Proxy
 }
-class UnixFTPEntryParser {
-    + DEFAULT_DATE_FORMAT : String
-    + DEFAULT_RECENT_DATE_FORMAT : String
-    + NUMERIC_DATE_FORMAT : String
-    + NUMERIC_DATE_CONFIG : FTPClientConfig
-    - REGEX : String
-    + UnixFTPEntryParser() : None
-    + UnixFTPEntryParser(config: FTPClientConfig) : None
-    + preParse(original: List<String>) : List<String>
-    + parseFTPEntry(entry: String, e: ParseException, e: NumberFormatException, e: NumberFormatException) : FTPFile
-    # getDefaultConfiguration() : FTPClientConfig
+class FTPClient {
+    + FTP_SYSTEM_TYPE : String
+    + FTP_SYSTEM_TYPE_DEFAULT : String
+    + SYSTEM_TYPE_PROPERTIES : String
+    + ACTIVE_LOCAL_DATA_CONNECTION_MODE : int
+    + ACTIVE_REMOTE_DATA_CONNECTION_MODE : int
+    + PASSIVE_LOCAL_DATA_CONNECTION_MODE : int
+    + PASSIVE_REMOTE_DATA_CONNECTION_MODE : int
+    - __dataConnectionMode : int
+    - __dataTimeout : int
+    - __passivePort : int
+    - __passiveHost : String
+    - __random : Random
+    - __activeMinPort : int
+    - __activeMaxPort : int
+    - __activeExternalHost : InetAddress
+    - __reportActiveExternalHost : InetAddress
+    - __passiveLocalHost : InetAddress
+    - __fileType : int
+    - __fileFormat : int
+    - __fileStructure : int
+    - __fileTransferMode : int
+    - __remoteVerificationEnabled : boolean
+    - __restartOffset : long
+    - __parserFactory : FTPFileEntryParserFactory
+    - __bufferSize : int
+    - __listHiddenFiles : boolean
+    - __useEPSVwithIPv4 : boolean
+    - __systemName : String
+    - __entryParser : FTPFileEntryParser
+    - __entryParserKey : String
+    - __configuration : FTPClientConfig
+    - __copyStreamListener : CopyStreamListener
+    - __controlKeepAliveTimeout : long
+    - __controlKeepAliveReplyTimeout : int
+    - __PARMS_PAT : java.util.regex.Pattern
+    - __autodetectEncoding : boolean
+    - __featuresMap : HashMap<String,Set<String>>
+    - getOverrideProperties() : Properties
+    + FTPClient() : None
+    - __initDefaults() : void
+    - __parsePathname(reply: String) : String
+    # _parsePassiveModeReply(reply: String, e: NumberFormatException, e: UnknownHostException) : void
+    # _parseExtendedPassiveModeReply(reply: String, e: NumberFormatException) : void
+    - __storeFile(command: int, remote: String, local: InputStream) : boolean
+    # _storeFile(command: String, remote: String, local: InputStream, e: IOException) : boolean
+    - __storeFileStream(command: int, remote: String) : OutputStream
+    # _storeFileStream(command: String, remote: String) : OutputStream
+    # _openDataConnection_(command: int, arg: String) : Socket
+    # _openDataConnection_(command: String, arg: String) : Socket
+    # _connectAction_() : void
+    + setDataTimeout(timeout: int) : void
+    + setParserFactory(parserFactory: FTPFileEntryParserFactory) : void
+    + disconnect() : void
+    + setRemoteVerificationEnabled(enable: boolean) : void
+    + isRemoteVerificationEnabled() : boolean
+    + login(username: String, password: String) : boolean
+    + login(username: String, password: String, account: String) : boolean
+    + logout() : boolean
+    + changeWorkingDirectory(pathname: String) : boolean
+    + changeToParentDirectory() : boolean
+    + structureMount(pathname: String) : boolean
+    + reinitialize() : boolean
+    + enterLocalActiveMode() : void
+    + enterLocalPassiveMode() : void
+    + enterRemoteActiveMode(host: InetAddress, port: int) : boolean
+    + enterRemotePassiveMode() : boolean
+    + getPassiveHost() : String
+    + getPassivePort() : int
+    + getDataConnectionMode() : int
+    - getActivePort() : int
+    - getHostAddress() : InetAddress
+    - getReportHostAddress() : InetAddress
+    + setActivePortRange(minPort: int, maxPort: int) : void
+    + setActiveExternalIPAddress(ipAddress: String) : void
+    + setPassiveLocalIPAddress(ipAddress: String) : void
+    + setPassiveLocalIPAddress(inetAddress: InetAddress) : void
+    + getPassiveLocalIPAddress() : InetAddress
+    + setReportActiveExternalIPAddress(ipAddress: String) : void
+    + setFileType(fileType: int) : boolean
+    + setFileType(fileType: int, formatOrByteSize: int) : boolean
+    + setFileStructure(structure: int) : boolean
+    + setFileTransferMode(mode: int) : boolean
+    + remoteRetrieve(filename: String) : boolean
+    + remoteStore(filename: String) : boolean
+    + remoteStoreUnique(filename: String) : boolean
+    + remoteStoreUnique() : boolean
+    + remoteAppend(filename: String) : boolean
+    + completePendingCommand() : boolean
+    + retrieveFile(remote: String, local: OutputStream) : boolean
+    # _retrieveFile(command: String, remote: String, local: OutputStream) : boolean
+    + retrieveFileStream(remote: String) : InputStream
+    # _retrieveFileStream(command: String, remote: String) : InputStream
+    + storeFile(remote: String, local: InputStream) : boolean
+    + storeFileStream(remote: String) : OutputStream
+    + appendFile(remote: String, local: InputStream) : boolean
+    + appendFileStream(remote: String) : OutputStream
+    + storeUniqueFile(remote: String, local: InputStream) : boolean
+    + storeUniqueFileStream(remote: String) : OutputStream
+    + storeUniqueFile(local: InputStream) : boolean
+    + storeUniqueFileStream() : OutputStream
+    + allocate(bytes: int) : boolean
+    + features() : boolean
+    + featureValues(feature: String) : String[]
+    + featureValue(feature: String) : String
+    + hasFeature(feature: String) : boolean
+    + hasFeature(feature: String, value: String) : boolean
+    - initFeatureMap() : boolean
+    + allocate(bytes: int, recordSize: int) : boolean
+    + doCommand(command: String, params: String) : boolean
+    + doCommandAsStrings(command: String, params: String) : String[]
+    + mlistFile(pathname: String) : FTPFile
+    + mlistDir() : FTPFile[]
+    + mlistDir(pathname: String) : FTPFile[]
+    + mlistDir(pathname: String, filter: FTPFileFilter) : FTPFile[]
+    # restart(offset: long) : boolean
+    + setRestartOffset(offset: long) : void
+    + getRestartOffset() : long
+    + rename(from: String, to: String) : boolean
+    + abort() : boolean
+    + deleteFile(pathname: String) : boolean
+    + removeDirectory(pathname: String) : boolean
+    + makeDirectory(pathname: String) : boolean
+    + printWorkingDirectory() : String
+    + sendSiteCommand(arguments: String) : boolean
+    + getSystemType() : String
+    + listHelp() : String
+    + listHelp(command: String) : String
+    + sendNoOp() : boolean
+    + listNames(pathname: String) : String[]
+    + listNames() : String[]
+    + listFiles(pathname: String) : FTPFile[]
+    + listFiles() : FTPFile[]
+    + listFiles(pathname: String, filter: FTPFileFilter) : FTPFile[]
+    + listDirectories() : FTPFile[]
+    + listDirectories(parent: String) : FTPFile[]
+    + initiateListParsing() : FTPListParseEngine
+    + initiateListParsing(pathname: String) : FTPListParseEngine
+    + initiateListParsing(parserKey: String, pathname: String) : FTPListParseEngine
+    - initiateListParsing(parser: FTPFileEntryParser, pathname: String) : FTPListParseEngine
+    - initiateMListParsing(pathname: String) : FTPListParseEngine
+    # getListArguments(pathname: String) : String
+    + getStatus() : String
+    + getStatus(pathname: String) : String
+    + getModificationTime(pathname: String) : String
+    + setModificationTime(pathname: String, timeval: String) : boolean
+    + setBufferSize(bufSize: int) : void
+    + getBufferSize() : int
+    - getDefaultedBufferSize() : int
+    + configure(config: FTPClientConfig) : void
+    + setListHiddenFiles(listHiddenFiles: boolean) : void
+    + getListHiddenFiles() : boolean
+    + isUseEPSVwithIPv4() : boolean
+    + setUseEPSVwithIPv4(selected: boolean) : void
+    + setCopyStreamListener(listener: CopyStreamListener) : void
+    + getCopyStreamListener() : CopyStreamListener
+    + setControlKeepAliveTimeout(controlIdle: long) : void
+    + getControlKeepAliveTimeout() : long
+    + setControlKeepAliveReplyTimeout(timeout: int) : void
+    + getControlKeepAliveReplyTimeout() : int
+    - __mergeListeners(local: CopyStreamListener) : CopyStreamListener
+    + setAutodetectUTF8(autodetect: boolean) : void
+    + getAutodetectUTF8() : boolean
+    + getSystemName() : String
 }
-class VMSVersioningFTPEntryParser {
-    - _preparse_pattern_ : Pattern
-    - PRE_PARSE_REGEX : String
-    + VMSVersioningFTPEntryParser() : None
-    + VMSVersioningFTPEntryParser(config: FTPClientConfig, pse: PatternSyntaxException) : None
-    + preParse(original: List<String>) : List<String>
-    # isVersioning() : boolean
+class IMAPClient {
+    + capability() : boolean
+    + noop() : boolean
+    + logout() : boolean
+    + login(username: String, password: String) : boolean
+    + select(mailboxName: String) : boolean
+    + examine(mailboxName: String) : boolean
+    + create(mailboxName: String) : boolean
+    + delete(mailboxName: String) : boolean
+    + rename(oldMailboxName: String, newMailboxName: String) : boolean
+    + subscribe(mailboxName: String) : boolean
+    + unsubscribe(mailboxName: String) : boolean
+    + list(refName: String, mailboxName: String) : boolean
+    + lsub(refName: String, mailboxName: String) : boolean
+    + status(mailboxName: String, itemNames: String[]) : boolean
+    + append(mailboxName: String, flags: String, datetime: String) : boolean
+    + append(mailboxName: String) : boolean
+    + check() : boolean
+    + close() : boolean
+    + expunge() : boolean
+    + search(charset: String, criteria: String) : boolean
+    + search(criteria: String) : boolean
+    + fetch(sequenceSet: String, itemNames: String) : boolean
+    + store(sequenceSet: String, itemNames: String, itemValues: String) : boolean
+    + copy(sequenceSet: String, mailboxName: String) : boolean
+    + uid(command: String, commandArgs: String) : boolean
 }
-class OS2FTPEntryParser {
-    - DEFAULT_DATE_FORMAT : String
-    - REGEX : String
-    + OS2FTPEntryParser() : None
-    + OS2FTPEntryParser(config: FTPClientConfig) : None
-    + parseFTPEntry(entry: String, e: ParseException) : FTPFile
-    # getDefaultConfiguration() : FTPClientConfig
+class IMAP {
+    + DEFAULT_PORT : int
+    - __DEFAULT_ENCODING : String
+    - __state : IMAPState
+    - __writer : BufferedWriter
+    - _reader : BufferedReader
+    - _replyCode : int
+    - _replyLines : List<String>
+    - _initialID : char[]
+    + IMAP() : None
+    - __getReply() : void
+    - __getReply(wantTag: boolean) : void
+    # _connectAction_() : void
+    # setState(state: IMAP.IMAPState) : void
+    + getState() : IMAP.IMAPState
+    + disconnect() : void
+    - sendCommandWithID(commandID: String, command: String, args: String) : int
+    + sendCommand(command: String, args: String) : int
+    + sendCommand(command: String) : int
+    + sendCommand(command: IMAPCommand, args: String) : int
+    + doCommand(command: IMAPCommand, args: String) : boolean
+    + sendCommand(command: IMAPCommand) : int
+    + doCommand(command: IMAPCommand) : boolean
+    + sendData(command: String) : int
+    + getReplyStrings() : String[]
+    + getReplyString() : String
+    # generateCommandID() : String
 }
-class VMSFTPEntryParser {
-    - DEFAULT_DATE_FORMAT : String
-    - REGEX : String
-    + VMSFTPEntryParser() : None
-    + VMSFTPEntryParser(config: FTPClientConfig) : None
-    + parseFTPEntry(entry: String, e: ParseException) : FTPFile
-    + readNextEntry(reader: BufferedReader) : String
-    # isVersioning() : boolean
-    # getDefaultConfiguration() : FTPClientConfig
-    + parseFileList(listStream: java.io.InputStream) : FTPFile[]
+class POP3Client {
+    - __parseStatus(line: String, e: NumberFormatException) : POP3MessageInfo
+    - __parseUID(line: String, e: NumberFormatException) : POP3MessageInfo
+    + capa() : boolean
+    + login(username: String, password: String) : boolean
+    + login(username: String, timestamp: String, secret: String) : boolean
+    + logout() : boolean
+    + noop() : boolean
+    + deleteMessage(messageId: int) : boolean
+    + reset() : boolean
+    + status() : POP3MessageInfo
+    + listMessage(messageId: int) : POP3MessageInfo
+    + listMessages() : POP3MessageInfo[]
+    + listUniqueIdentifier(messageId: int) : POP3MessageInfo
+    + listUniqueIdentifiers() : POP3MessageInfo[]
+    + retrieveMessage(messageId: int) : Reader
+    + retrieveMessageTop(messageId: int, numLines: int) : Reader
 }
-class DefaultFTPFileEntryParserFactoryTest {
-    + testDefaultParserFactory(pie: ParserInitializationException, pie: ParserInitializationException, pie: ParserInitializationException, pie: ParserInitializationException, pie: ParserInitializationException) : void
-    - checkParserClass(fact: FTPFileEntryParserFactory, key: String, expected: Class<?>) : void
-    + testDefaultParserFactoryConfig(npe: NullPointerException) : void
+class POP3 {
+    + DEFAULT_PORT : int
+    + DISCONNECTED_STATE : int
+    + AUTHORIZATION_STATE : int
+    + TRANSACTION_STATE : int
+    + UPDATE_STATE : int
+    - _OK : String
+    - _OK_INT : String
+    - _ERROR : String
+    - _DEFAULT_ENCODING : String
+    - __popState : int
+    - _writer : BufferedWriter
+    - _reader : BufferedReader
+    - _replyCode : int
+    - _lastReplyLine : String
+    - _replyLines : List<String>
+    - _commandSupport_ : ProtocolCommandSupport
+    + POP3() : None
+    - __getReply() : void
+    # _connectAction_() : void
+    + setState(state: int) : void
+    + getState() : int
+    + getAdditionalReply() : void
+    + disconnect() : void
+    + sendCommand(command: String, args: String) : int
+    + sendCommand(command: String) : int
+    + sendCommand(command: int, args: String) : int
+    + sendCommand(command: int) : int
+    + getReplyStrings() : String[]
+    + getReplyString() : String
+    + removeProtocolCommandistener(listener: org.apache.commons.net.ProtocolCommandListener) : void
+    # getCommandSupport() : ProtocolCommandSupport
 }
-DefaultFTPFileEntryParserFactory --> FTPFileEntryParser : couples
-DefaultFTPFileEntryParserFactory --> UnixFTPEntryParser : couples
-DefaultFTPFileEntryParserFactory --> VMSVersioningFTPEntryParser : couples
-DefaultFTPFileEntryParserFactory --> OS2FTPEntryParser : couples
-VMSVersioningFTPEntryParser --> VMSFTPEntryParser : couples
-VMSFTPEntryParser --|> VMSVersioningFTPEntryParser : inherits
-DefaultFTPFileEntryParserFactoryTest --> DefaultFTPFileEntryParserFactory : couples
-DefaultFTPFileEntryParserFactoryTest --> FTPFileEntryParser : couples
-DefaultFTPFileEntryParserFactoryTest --> UnixFTPEntryParser : couples
-DefaultFTPFileEntryParserFactoryTest --> OS2FTPEntryParser : couples
-DefaultFTPFileEntryParserFactoryTest --> VMSFTPEntryParser : couples
+class SMTPClient {
+    + SMTPClient() : None
+    + SMTPClient(encoding: String) : None
+    + completePendingCommand() : boolean
+    + login(hostname: String) : boolean
+    + login() : boolean
+    + setSender(path: RelayPath) : boolean
+    + setSender(address: String) : boolean
+    + addRecipient(path: RelayPath) : boolean
+    + addRecipient(address: String) : boolean
+    + sendMessageData() : Writer
+    + sendShortMessageData(message: String) : boolean
+    + sendSimpleMessage(sender: String, recipient: String, message: String) : boolean
+    + sendSimpleMessage(sender: String, recipients: String[], message: String) : boolean
+    + logout() : boolean
+    + reset() : boolean
+    + verify(username: String) : boolean
+    + listHelp() : String
+    + listHelp(command: String) : String
+    + sendNoOp() : boolean
+}
+class SMTP {
+    + DEFAULT_PORT : int
+    - __DEFAULT_ENCODING : String
+    # encoding : String
+    - _commandSupport_ : ProtocolCommandSupport
+    - _reader : BufferedReader
+    - _writer : BufferedWriter
+    - _replyCode : int
+    - _replyLines : ArrayList<String>
+    - _newReplyString : boolean
+    - _replyString : String
+    + SMTP() : None
+    + SMTP(encoding: String) : None
+    - __sendCommand(command: String, args: String, includeSpace: boolean) : int
+    - __sendCommand(command: int, args: String, includeSpace: boolean) : int
+    - __getReply(e: NumberFormatException) : void
+    # _connectAction_() : void
+    + disconnect() : void
+    + sendCommand(command: String, args: String) : int
+    + sendCommand(command: int, args: String) : int
+    + sendCommand(command: String) : int
+    + sendCommand(command: int) : int
+    + getReplyCode() : int
+    + getReply() : int
+    + getReplyStrings() : String[]
+    + getReplyString() : String
+    + helo(hostname: String) : int
+    + mail(reversePath: String) : int
+    + rcpt(forwardPath: String) : int
+    + data() : int
+    + send(reversePath: String) : int
+    + soml(reversePath: String) : int
+    + saml(reversePath: String) : int
+    + rset() : int
+    + vrfy(user: String) : int
+    + expn(name: String) : int
+    + help() : int
+    + help(command: String) : int
+    + noop() : int
+    + turn() : int
+    + quit() : int
+    + removeProtocolCommandistener(listener: org.apache.commons.net.ProtocolCommandListener) : void
+    # getCommandSupport() : ProtocolCommandSupport
+}
+FTP --> SocketClient : couples
+FTP --|> FTPClient : inherits
+SocketClient --|> FTP : inherits
+SocketClient --|> IMAP : inherits
+SocketClient --|> POP3 : inherits
+SocketClient --|> SMTP : inherits
+FTPClient --> FTP : couples
+IMAPClient --> IMAP : couples
+IMAP --> SocketClient : couples
+IMAP --|> IMAPClient : inherits
+POP3Client --> POP3 : couples
+POP3 --> SocketClient : couples
+POP3 --|> POP3Client : inherits
+SMTPClient --> SMTP : couples
+SMTP --> SocketClient : couples
+SMTP --|> SMTPClient : inherits
 @enduml

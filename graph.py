@@ -62,13 +62,15 @@ import os
 # === CONFIG ===
 UND_FILE = r"C:\Users\Owner\Downloads\commons-net-3.2-src\commons-net-3.2-src\commons-net-3.2-src.und"
 SELECTED_CLASSES = [
-    "DefaultFTPFileEntryParserFactory",
-    "DefaultFTPFileEntryParserFactoryTest",
-    "UnixFTPEntryParser",
-    "VMSVersioningFTPEntryParser",
-    "FTPFileEntryParser",
-    "VMSFTPEntryParser",
-    "OS2FTPEntryParser",
+    "SocketClient",
+    "FTP",
+    "SMTP",
+    "POP3",
+    "IMAP",
+    "FTPClient",
+    "SMTPClient",
+    "POP3Client",
+    "IMAPClient",
 ]
 # SELECTED_CLASSES = ["CopyStreamAdapter", "CopyStreamListener"]
 OUTPUT_FILE = "class_diagram_with_relationships.puml"

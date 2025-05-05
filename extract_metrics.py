@@ -2,8 +2,6 @@ import os
 import sys
 import csv
 from pathlib import Path
-
-sys.path.append("/Applications/Understand.app/Contents/MacOS")
 import understand as und
 
 # --- Load .env ---
@@ -50,14 +48,25 @@ class MetricExporter:
 
     def extract(self):
         db = und.open(self.db_path)
-        results = {}
-        for ent in db.ents("Class"):
+        classes = {}
+        interfaces = {}
+
+        # Extract classes
+        for ent in db.ents("Class ~Interface"):
             if ent.library() == "Standard":
                 continue
             name = ent.longname()
             metrics = {metric: ent.metric(metric) or 0 for metric in METRICS}
-            results[name] = metrics
-        return results
+            classes[name] = metrics
+
+        # Extract interfaces
+        for ent in db.ents("Interface"):
+            if ent.library() == "Standard":
+                continue
+            name = ent.longname()
+            interfaces[name] = {}  # No metrics needed
+
+        return classes, interfaces
 
 def export_metrics_csv(data, filepath):
     with open(filepath, "w", newline="") as f:
@@ -67,10 +76,18 @@ def export_metrics_csv(data, filepath):
             row = [cls] + [metrics[m] for m in METRICS]
             writer.writerow(row)
 
-def summarize_totals(data1, data2, added, deleted, output_path):
+def summarize_totals(data1, data2, interfaces1, interfaces2,
+                     added_classes, deleted_classes,
+                     added_interfaces, deleted_interfaces,
+                     output_path):
     summary = []
-    summary.append(["Classes Added", len(added), ""])
-    summary.append(["Classes Deleted", len(deleted), ""])
+    summary.append(["Total Classes", len(data1), len(data2)])
+    summary.append(["Total Interfaces", len(interfaces1), len(interfaces2)])
+    summary.append(["Classes Added", len(added_classes), ""])
+    summary.append(["Classes Deleted", len(deleted_classes), ""])
+    summary.append(["Interfaces Added", len(added_interfaces), ""])
+    summary.append(["Interfaces Deleted", len(deleted_interfaces), ""])
+
     for metric in METRICS:
         total1 = sum(cls[metric] for cls in data1.values())
         total2 = sum(cls[metric] for cls in data2.values())
@@ -87,36 +104,55 @@ def summarize_totals(data1, data2, added, deleted, output_path):
         writer.writerow(["Metric", "Ver1", "Ver2"])
         writer.writerows(summary)
 
+    # Print added/deleted entities
+    print("\n🆕 Classes Added:")
+    for name in sorted(added_classes):
+        print(" +", name)
+
+    print("\n🗑️ Classes Deleted:")
+    for name in sorted(deleted_classes):
+        print(" -", name)
+
+    print("\n🆕 Interfaces Added:")
+    for name in sorted(added_interfaces):
+        print(" +", name)
+
+    print("\n🗑️ Interfaces Deleted:")
+    for name in sorted(deleted_interfaces):
+        print(" -", name)
+
 # --- Main Execution ---
-if _name_ == "_main_":
+if __name__ == "__main__":
     load_dotenv()
 
-    # Ask user
     v1_label = input("Enter first version label (e.g. v3.2): ").strip()
     v2_label = input("Enter second version label (e.g. v3.3): ").strip()
 
     k1, path1 = get_version_path(v1_label)
     k2, path2 = get_version_path(v2_label)
 
-    # Create full path under version_metrics folder
     output_dir = os.path.join("version_metrics")
     os.makedirs(output_dir, exist_ok=True)
 
     print(f"\n📦 Comparing: {v1_label} vs {v2_label}")
     print(f"📂 Exporting to: {output_dir}/")
 
-    data1 = MetricExporter(path1).extract()
-    data2 = MetricExporter(path2).extract()
+    data1, interfaces1 = MetricExporter(path1).extract()
+    data2, interfaces2 = MetricExporter(path2).extract()
 
     export_metrics_csv(data1, os.path.join(output_dir, f"metrics_{v1_label}.csv"))
     export_metrics_csv(data2, os.path.join(output_dir, f"metrics_{v2_label}.csv"))
 
-    classes1 = set(data1)
-    classes2 = set(data2)
-    added = classes2 - classes1
-    deleted = classes1 - classes2
+    added_classes = set(data2.keys()) - set(data1.keys())
+    deleted_classes = set(data1.keys()) - set(data2.keys())
+    added_interfaces = set(interfaces2.keys()) - set(interfaces1.keys())
+    deleted_interfaces = set(interfaces1.keys()) - set(interfaces2.keys())
 
-    output_summmary_dir = os.path.join("compared_version_result")
+    output_summary_dir = os.path.join("compared_version_result")
+    os.makedirs(output_summary_dir, exist_ok=True)
+    summary_path = os.path.join(output_summary_dir, f"summary_{v1_label}_vs_{v2_label}.csv")
 
-    summary_path = os.path.join(output_summmary_dir, f"summary_{v1_label}_vs_{v2_label}.csv")
-    summarize_totals(data1, data2, added, deleted, summary_path)
+    summarize_totals(data1, data2, interfaces1, interfaces2,
+                     added_classes, deleted_classes,
+                     added_interfaces, deleted_interfaces,
+                     summary_path)
