@@ -1,0 +1,15 @@
+Metric,v3.2,v3.3
+Total Classes,299,304
+Total Interfaces,17,17
+Classes Added,,6
+Classes Deleted,1,
+Interfaces Added,,0
+Interfaces Deleted,0,
+Changes in CountClassDerived,97,97
+Changes in CountClassCoupled,1663,1691
+Changes in CountDeclClassVariable,710,748
+Changes in SumCyclomatic,3844,3891
+Changes in CountDeclClass,0,0
+Changes in CountDeclInstanceVariablePublic,0,0
+Changes in CountDeclClassMethod,153,155
+Changes in AvgCyclomatic,617,622

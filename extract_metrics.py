@@ -16,10 +16,22 @@ def load_dotenv(filepath=".env"):
     except FileNotFoundError:
         print("⚠️ .env file not found")
 
-# --- Prompt for version input and map to env key like VERSION_32 ---
+def load_total_class_counts(filepath="total_class_count.txt"):
+    counts = {}
+    try:
+        with open(filepath, "r") as f:
+            for line in f:
+                line = line.strip()
+                if "=" in line and not line.startswith("#"):
+                    version, count = line.split("=", 1)
+                    counts[version.strip()] = int(count.strip())
+    except FileNotFoundError:
+        print("❌ total_class_count.txt not found. Using fallback counts.")
+    return counts
+
 def get_version_path(label):
     try:
-        num = label.lower().replace("v", "").replace(".", "")  # e.g., v3.2 → 32
+        num = label.lower().replace("v", "").replace(".", "")  
         key = f"VERSION_{num}"
         value = os.getenv(key)
         if not value:
@@ -51,7 +63,6 @@ class MetricExporter:
         classes = {}
         interfaces = {}
 
-        # Extract classes
         for ent in db.ents("Class ~Interface"):
             if ent.library() == "Standard":
                 continue
@@ -59,12 +70,11 @@ class MetricExporter:
             metrics = {metric: ent.metric(metric) or 0 for metric in METRICS}
             classes[name] = metrics
 
-        # Extract interfaces
         for ent in db.ents("Interface"):
             if ent.library() == "Standard":
                 continue
             name = ent.longname()
-            interfaces[name] = {}  # No metrics needed
+            interfaces[name] = {}
 
         return classes, interfaces
 
@@ -76,16 +86,27 @@ def export_metrics_csv(data, filepath):
             row = [cls] + [metrics[m] for m in METRICS]
             writer.writerow(row)
 
-def summarize_totals(data1, data2, interfaces1, interfaces2,
+def summarize_totals(v1_label, v2_label,
+                     data1, data2,
+                     interfaces1, interfaces2,
                      added_classes, deleted_classes,
                      added_interfaces, deleted_interfaces,
-                     output_path):
+                     output_path,
+                     total_class_counts):
     summary = []
-    summary.append(["Total Classes", len(data1), len(data2)])
-    summary.append(["Total Interfaces", len(interfaces1), len(interfaces2)])
-    summary.append(["Classes Added", len(added_classes), ""])
+
+    total_classes_v1 = total_class_counts.get(v1_label, len(data1))
+    total_classes_v2 = total_class_counts.get(v2_label, len(data2))
+    total_interfaces_v1 = len(interfaces1)
+    total_interfaces_v2 = len(interfaces2)
+
+    class_added_count = total_classes_v2 - total_classes_v1 + len(deleted_classes)
+
+    summary.append(["Total Classes", total_classes_v1, total_classes_v2])
+    summary.append(["Total Interfaces", total_interfaces_v1, total_interfaces_v2])
+    summary.append(["Classes Added", "", class_added_count])
     summary.append(["Classes Deleted", len(deleted_classes), ""])
-    summary.append(["Interfaces Added", len(added_interfaces), ""])
+    summary.append(["Interfaces Added", "", len(added_interfaces)])
     summary.append(["Interfaces Deleted", len(deleted_interfaces), ""])
 
     for metric in METRICS:
@@ -94,17 +115,17 @@ def summarize_totals(data1, data2, interfaces1, interfaces2,
         summary.append([f"Changes in {metric}", total1, total2])
 
     print("\n📊 Metric Summary Table")
-    print(f"{'Metric':35} {'Ver1':>10} {'Ver2':>10}")
+    print(f"{'Metric':35} {v1_label:>10} {v2_label:>10}")
     print("-" * 60)
     for row in summary:
         print(f"{row[0]:35} {str(row[1]):>10} {str(row[2]):>10}")
 
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["Metric", "Ver1", "Ver2"])
+        writer.writerow(["Metric", v1_label, v2_label])
         writer.writerows(summary)
 
-    # Print added/deleted entities
     print("\n🆕 Classes Added:")
     for name in sorted(added_classes):
         print(" +", name)
@@ -124,9 +145,15 @@ def summarize_totals(data1, data2, interfaces1, interfaces2,
 # --- Main Execution ---
 if __name__ == "__main__":
     load_dotenv()
+    total_class_counts = load_total_class_counts()
 
     v1_label = input("Enter first version label (e.g. v3.2): ").strip()
     v2_label = input("Enter second version label (e.g. v3.3): ").strip()
+
+    if not v1_label.startswith("v"):
+        v1_label = "v" + v1_label
+    if not v2_label.startswith("v"):
+        v2_label = "v" + v2_label
 
     k1, path1 = get_version_path(v1_label)
     k2, path2 = get_version_path(v2_label)
@@ -152,7 +179,10 @@ if __name__ == "__main__":
     os.makedirs(output_summary_dir, exist_ok=True)
     summary_path = os.path.join(output_summary_dir, f"summary_{v1_label}_vs_{v2_label}.csv")
 
-    summarize_totals(data1, data2, interfaces1, interfaces2,
+    summarize_totals(v1_label, v2_label,
+                     data1, data2,
+                     interfaces1, interfaces2,
                      added_classes, deleted_classes,
                      added_interfaces, deleted_interfaces,
-                     summary_path)
+                     summary_path,
+                     total_class_counts)
